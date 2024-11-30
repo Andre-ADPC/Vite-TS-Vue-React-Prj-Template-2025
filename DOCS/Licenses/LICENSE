@@ -1,0 +1,40 @@
+<!-- @format -->
+
+## Licenses Applicable
+
+### This Template StarterKit Application
+
+Please refer to to the entry-point [LICENSE](.\licenses\LICENSE-MIT.md) in this repository.
+Other licenses are applicable and in each case please refer to the main vendors's websites given below for more information about their proprietary rights.
+
+### Vue
+
+The [Vue Framework](https://vuejs.org/) and all its related licenses.
+
+### Vite
+
+[Vite Frontend Tooling](https://vitejs.dev/) and all its related licenses.
+
+### TypeScript
+
+[TypeScript Lang Tooling](https://www.typescriptlang.org/) and all its related licenses.
+
+### Pinia
+
+[Pinia State Management Tooling](https://pinia.vuejs.org/) and all its related licenses.
+
+### Tailwind
+
+[Tailwind CSS Utility Tooling](https://tailwindcss.com/) and all its related licenses.
+
+### Playwright
+
+[Playwright Test Tooling](https://playwright.dev/) and all its related licenses.
+
+### Cypress
+
+[Cypress Test Tooling](https://www.cypress.io/) and all its related licenses.
+
+### Cerbos
+
+[Cerbos Auth Tooling](https://www.cerbos.dev/ecosystem/javascript) and all its related licenses.
