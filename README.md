@@ -1,10 +1,10 @@
 # The Desired Project Name => Vite-TS-Vue-Prj-Template-2025
 
-This template should help get you started developing with Vite and TypeScript in Vue.JS 3. Various CSS technologies are made available by default.
+This template should help get you started developing with Vite and TypeScript in Vue.JS 3. Various Testing and CSS technologies are made available by default.
 
-The project is Domain-Driven Design-based and applies best-practice TDD aproaches using Model-Driven evaluation, Behavioural Design followed by Unit, Functional, Component, Integration, and End-to-End testing running on both the Playwright and Cypress testing frameworks.
+The project is Domain-Driven Design-based and applies best-practice TDD approaches using Model-Driven evaluation, and Behavioural-Driven Design followed by Unit, Functional, Component, Integration, and End-to-End testing running on either or both the Playwright and Cypress testing frameworks.
 
-For detail on how the Project Template is structured, a VitePress Documentation section is added in the repository's **[DOCS](./DOCS/)** folder. You can refer to the details covering each section, and expand on those when shaping the template into as per your unique requirements.
+For details on how the Project Template is structured, a VitePress Documentation section has been added to the repository's **[DOCS](./DOCS/)** folder. You can, if you feel the need, refer to the details covering each section, and expand on those when shaping the template as per your unique project requirements.
 
 ## Recommended IDE Setup
 
