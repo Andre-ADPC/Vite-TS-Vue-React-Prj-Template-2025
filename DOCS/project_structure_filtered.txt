@@ -1,0 +1,397 @@
+--- Folder Structure ---
+.editorconfig
+.gitignore
+.prettierrc.json
+.stylelintrc.json
+[DOCS]
+    ├── .project_structure_filter
+    ├── .project_structure_ignore
+    ├── [Licenses]
+        ├── LICENSE
+        └── LICENSE-MIT.md
+    ├── PROJECT_INITIATION_STEPS.md
+    ├── PROJECT_OVERVIEW.md
+    ├── project_structure_filtered.txt
+    ├── README_VUE.md
+    ├── temp.MD
+    ├── temp.txt
+    └── Vue3_TypeScript_Vite.md
+env.d.ts
+eslint.config.js
+index.html
+package-lock.json
+package.json
+postcss.config.js
+[public]
+    ├── ADPC-dark.svg
+    ├── ADPC-light.svg
+    ├── android-chrome-192x192.png
+    ├── android-chrome-512x512.png
+    ├── apple-touch-icon.png
+    ├── Copy to HTML Head section.txt
+    ├── favicon-16x16.png
+    ├── favicon-32x32.png
+    ├── favicon.ico
+    ├── logo.svg
+    ├── og-proj-sm01.jpg
+    ├── og-proj-sm01.webp
+    ├── pinia.svg
+    ├── typescript.svg
+    ├── vite.svg
+    └── vue.svg
+README.md
+site.webmanifest
+[src]
+    ├── App.vue
+    ├── AppTwo.vue
+    ├── [assets]
+        ├── [images]
+            ├── ADPCBanner.jpeg
+            ├── cypress-light.svg
+            ├── cypress.svg
+            ├── playwright.svg
+            ├── postcss.svg
+            ├── stylelint-dark.svg
+            ├── stylelint.svg
+            └── tailwind.svg
+        └── [styles]
+            ├── base.css
+            └── main.css
+    ├── [components]
+        ├── HelloWorld.vue
+        ├── [icons]
+            ├── IconCommunity.vue
+            ├── IconDocumentation.vue
+            ├── IconEcosystem.vue
+            ├── IconSupport.vue
+            └── IconTooling.vue
+        ├── TheWelcome.vue
+        ├── WelcomeInViteWorld.vue
+        ├── WelcomeItem.vue
+        └── [__vitests__]
+            ├── [cypress_ct]
+            ├── HelloWorld.spec.ts
+            └── [playwright-ct]
+    ├── main.ts
+    ├── [router]
+        └── index.ts
+    ├── [stores]
+        └── counter.ts
+    ├── [tests]
+        ├── [cypress]
+        └── [playwright]
+    └── [views]
+        ├── AboutView.vue
+        └── HomeView.vue
+tailwind.config.ts
+tsconfig.app.json
+tsconfig.json
+tsconfig.node.json
+tsconfig.vitest.json
+vite.config.ts
+vitest.config.ts
+
+--- Root File List ---
+.editorconfig
+.gitignore
+.prettierrc.json
+.stylelintrc.json
+env.d.ts
+eslint.config.js
+index.html
+package-lock.json
+package.json
+postcss.config.js
+README.md
+site.webmanifest
+tailwind.config.ts
+tsconfig.app.json
+tsconfig.json
+tsconfig.node.json
+tsconfig.vitest.json
+vite.config.ts
+vitest.config.ts
+
+--- File Content ---
+--- File: package.json ---
+{
+  "name": "thedesiredprojectname",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force",
+    "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
+    "lint:eslint": "eslint . --fix",
+    "lint": "run-s lint:*",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "pinia": "^2.2.6",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^22.9.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vitejs/plugin-vue-jsx": "^4.0.1",
+    "@vitest/eslint-plugin": "1.1.7",
+    "@vue/eslint-config-prettier": "^10.1.0",
+    "@vue/eslint-config-typescript": "^14.1.3",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/tsconfig": "^0.5.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.14.0",
+    "eslint-plugin-oxlint": "^0.11.0",
+    "eslint-plugin-vue": "^9.30.0",
+    "jsdom": "^25.0.1",
+    "npm-run-all2": "^7.0.1",
+    "oxlint": "^0.11.0",
+    "postcss": "^8.4.49",
+    "postcss-import": "^16.1.0",
+    "postcss-nested": "^7.0.2",
+    "prettier": "^3.3.3",
+    "stylelint": "^16.10.0",
+    "stylelint-config-standard": "^36.0.1",
+    "tailwindcss": "^3.4.15",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.10",
+    "vite-plugin-vue-devtools": "^7.5.4",
+    "vitest": "^2.1.4",
+    "vue-tsc": "^2.1.10"
+  }
+}
+
+--- File: vite.config.ts ---
+    import { fileURLToPath, URL } from 'node:url'
+
+    import { defineConfig } from 'vite'
+    import vue from '@vitejs/plugin-vue'
+    import vueJsx from '@vitejs/plugin-vue-jsx'
+    import vueDevTools from 'vite-plugin-vue-devtools'
+
+    // https://vite.dev/config/
+    export default defineConfig({
+      plugins: [vue(), vueJsx(), vueDevTools()],
+      resolve: {
+        alias: {
+          '@': fileURLToPath(new URL('./src/main.ts', import.meta.url)),
+        },
+      },
+    })
+
+
+--- File: ts.config.json ---
+    {
+    "files": [],
+    "references": [
+        {
+        "path": "./tsconfig.node.json"
+        },
+        {
+        "path": "./tsconfig.app.json"
+        },
+        {
+        "path": "./tsconfig.vitest.json"
+        }
+    ]
+    }
+
+--- File tsconfig.app.json ---
+    {
+      "extends": "@vue/tsconfig/tsconfig.dom.json",
+      "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+      "exclude": ["src/**/__vitests__/*"],
+      "compilerOptions": {
+        "composite": true,
+        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+
+        "baseUrl": ".",
+        "paths": {
+          "@/*": ["./src/*"]
+        }
+      }
+    }
+
+--- File tsconfig.node.json ---
+    {
+      "extends": "@tsconfig/node22/tsconfig.json",
+      "include": [
+        "vite.config.*",
+        "vitest.config.*",
+        "cypress.config.*",
+        "nightwatch.conf.*",
+        "playwright.config.*"
+      ],
+      "compilerOptions": {
+        "composite": true,
+        "noEmit": true,
+        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "types": ["node"]
+      }
+    }
+
+
+--- File tsconfig.vitest.json ---
+    {
+      "extends": "./tsconfig.app.json",
+      "exclude": [],
+      "compilerOptions": {
+        "composite": true,
+        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.vitest.tsbuildinfo",
+    
+        "lib": [],
+        "types": ["node", "jsdom"]
+      }
+    }
+    
+
+--- File: main.ts ---
+    import './assets/styles/main.css'
+
+    import { createApp } from 'vue'
+    import { createPinia } from 'pinia'
+
+    import App from './App.vue'
+    import router from './router'
+
+    const app = createApp(App)
+
+    app.use(createPinia())
+    app.use(router)
+
+    app.mount('#app')
+
+--- File: index.html ---
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="./favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>A Vite, TS & Vue App Development Template</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" /    >
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" /    >
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" /    >
+        <link rel="manifest" href="./site.webmanifest" />
+      </head>
+      <body>
+        <div id="app"></div>
+        <script type="module" src="./main.ts"></script>
+      </body>
+    </html>
+
+
+--- File: App.vue ---
+    <script setup lang="ts">
+    import WelcomeInViteWorld from './components/WelcomeInViteWorld.vue'
+
+    // Dynamic Asset Loading Where required
+    function getImageUrl(name: string, ext: string): string {
+      return new URL(`./assets/images/${name}.${ext}`, import.meta.url).href
+    }
+    </script>
+
+    <template>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src="/vite.svg" class="logo vite" alt="Vite logo" />
+        </a>
+        <a href="https://vuejs.org/" target="_blank">
+          <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+        </a>
+        <a href="https://www.typescriptlang.org/" target="_blank">
+          <img src="./assets/typescript.svg" class="logo ts" alt="TS logo" />
+        </a>
+        <a href="https://pinia.vuejs.org/" target="_blank">
+          <img src="./assets/pinia.svg" class="logo pinia" alt="Pinia logo" />
+        </a>
+      </div>
+      <WelcomeInViteWorld msg="Vite + Vue + TS + Pinia" />
+    </template>
+
+    <style scoped>
+    .logo {
+      height: 6em;
+      padding: 1.5em;
+      will-change: filter;
+      transition: filter 300ms;
+    }
+    .logo.vite:hover {
+      filter: drop-shadow(0 0 2em #646cffaa);
+    }
+    .logo.vue:hover {
+      filter: drop-shadow(0 0 2em #42b883aa);
+    }
+    .logo.ts:hover {
+      filter: drop-shadow(0 0 2em #3179c6aa);
+    }
+    .logo.pinia:hover {
+      filter: drop-shadow(0 0 2em #ffd24caa);
+    }
+    </style>
+
+
+--- File: WelcomeInViteWorld.vue ---
+    <script setup lang="ts">
+    import { ref } from 'vue'
+
+    defineProps<{ msg: string }>()
+
+    const count = ref(0)
+    </script>
+
+    <template>
+      <h1>{{ msg }}</h1>
+      <h2 class="heading-scoped">Welcome in Vite World, Vue.JS 3!</h2>
+      <div class="card">
+        <button type="button" @click="count++">count is {{ count }}</button>
+        <p>
+          Edit
+          <code class="frame-scoped">components/WelcomeInViteWorld.vue</code> to    test HMR
+        </p>
+        <p class="para-scope">We're also leveraging some Added tech stacks in this  Project Template</p>
+      </div>
+
+      <p>
+        Check out
+        <a href="https://vuejs.org/guide/quick-start.html#local"    target="_blank">create-vue</a>, the official Vue + Vite
+        starter
+      </p>
+      <p>
+        Learn more about IDE Support for Vue in the
+        <a href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support"   target="_blank">Vue Docs Scaling up Guide</a>.
+      </p>
+      <p class="read-the-docs">Click on the Logos to learn more</p>
+    </template>
+
+    <style lang="postcss" scoped>
+    .read-the-docs {
+      color: #41b883;
+    }
+    .para-scope {
+      @apply font-mono text-lg text-yellow-500 underline-offset-8;
+    }
+    .heading-scoped {
+      @apply text-3xl font-bold underline underline-offset-8;
+    }
+    .outline-scoped {
+      @apply m-10 px-2 py-2 focus:outline outline-2 outline-blue-500 border-2   border-teal-600;
+    }
+    .frame-scoped {
+      @apply m-2 px-4 py-2 focus:outline outline-2 outline-blue-500 border-2    border-teal-600;
+    }
+    .position {
+      @apply flex items-center justify-center m-10 sm:w-1/3 lg:w-1/4;
+    }
+    </style>
