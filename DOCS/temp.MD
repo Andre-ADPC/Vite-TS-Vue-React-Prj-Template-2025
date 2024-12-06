@@ -1,9 +1,9 @@
-# TypeScript functionality in a Vue.js 3 projec# t using Vite
+# Debugging TypeScript Functionality in a Vue.js 3 Project Using Vite, Using AI
 
-Hi there! I need help with some strict TypeScript functionality in a Vue.js 3 project using Vite, please.
+Hi there! I need help with some **strict** TypeScript functionality in a Vue.js 3 project using Vite, please.
 
 Background:
-My ,script. section is as follows:
+My, `<script>` `</script>` section in `App.vue` is as follows:
 
 ```html
 <script setup lang="ts">
@@ -22,7 +22,7 @@ My ,script. section is as follows:
 </script>
 ```
 
-and the related <template> section to load the image/s is:
+and the related `<template>` section to load the image/s is:
 
 ```html
 <div>
@@ -37,7 +37,11 @@ and the related <template> section to load the image/s is:
 </div>
 ```
 
+I have followed the **Sonarlint** guidelines in my IDE, in an attempt to resolve the error, however, some of the configuration syntax **Sonarlint** recommended seems odd to me; `(;ADPCBanner; jpeg;)` with the leading semicolon, for example does not make any sense to me in this instance.
+
 The Error thrown:
+
+```sh
 [plugin:vite:import-analysis] Failed to resolve import "getImageUrl(;ADPCBanner; jpeg;)" from "src/components/WelcomeInViteWorld.vue". Does the file exist?
 
 C:/Laragon/www/Vue-TS-Prj-Template-2025/src/components/WelcomeInViteWorld.vue:26:43
@@ -48,8 +52,10 @@ C:/Laragon/www/Vue-TS-Prj-Template-2025/src/components/WelcomeInViteWorld.vue:26
 | ^
 21 | const \_hoisted_1 = { class: "card" };
 22 | function \_sfc_render(\_ctx, \_cache, $props, $setup, $data, $options]
+```
 
 I hope you can help me resolve this.
+
 Note: The image files do exist, is present in my local project, and the folder path referenced from the root is as follows:
 ../src/assets/images/ADPCBanner.jpeg
 
@@ -60,13 +66,13 @@ Let’s begin our coding quest!
 
 ---
 
-### Analyzing the Issue:
+### Analyzing the Issue
 
 The error indicates the code is trying to resolve `getImageUrl(;ADPCBanner; jpeg;)` as a static import, which is invalid. This happens because `getImageUrl` was mistakenly invoked with an incorrect syntax or passed as an invalid string in your template section. Dynamic imports using `new URL` need to resolve statically during build time in Vite and TypeScript. The issue lies with how the `getImageUrl` function is invoked in the `<template>` section. Specifically, the improper usage of semicolons (`;`) instead of commas (`,`).
 
 ---
 
-### Solution Plan:
+### Solution Plan
 
 1. **Fix the Template Syntax**:  
    Ensure `getImageUrl` is called correctly in the Vue template syntax. The semicolon-separated string is an error; replace it with a proper function invocation.
@@ -82,7 +88,7 @@ The error indicates the code is trying to resolve `getImageUrl(;ADPCBanner; jpeg
 
 ---
 
-### Updated Code:
+### Updated Code
 
 #### `<script setup lang="ts">`
 
@@ -119,7 +125,7 @@ function getImageUrl(name: string, ext: string): string {
 
 ---
 
-### Key Changes:
+### Key Changes
 
 1. **Syntax Correction**: Changed `getImageUrl(;ADPCBanner; jpeg;)` to `getImageUrl('ADPCBanner', 'jpeg')`.
 2. **Type Safety**: Enforced parameter typing for `getImageUrl` in TypeScript, ensuring only strings are passed.
@@ -127,7 +133,7 @@ function getImageUrl(name: string, ext: string): string {
 
 ---
 
-### Testing:
+### Testing
 
 1. **Verify Build and Runtime**: Ensure the application compiles without errors and images render correctly in the browser.
 2. **Validate File Placement**: Double-check that the image file (`ADPCBanner.jpeg`) exists at `src/assets/images/`.
@@ -138,7 +144,7 @@ If any further adjustments are needed, let me know!
 
 ---
 
-### Hotkeys:
+### Hotkeys
 
 - **W**: Yes, Continue  
   Confirm and validate further.
@@ -148,10 +154,11 @@ If any further adjustments are needed, let me know!
   Propose three refinements or edge-case handling.
 
 OK let me go check this out. the Debugging window of TS told me that an ";" was expected in each of the places you noticed them [src="getImageUrl(;ADPCBanner; jpeg;)"]. The thing is silly, TBH!
+
 Why lead me by the nose when the issue is with the function declaration in the script?
 
 I implemented your recommendations:
-For the <script>:
+For the `<script>`:
 
 ```html
 <script setup lang="ts">
@@ -170,7 +177,7 @@ For the <script>:
 </script>
 ```
 
-For the <template>:
+For the `<template>`:
 
 ```html
 <div>
@@ -185,6 +192,8 @@ For the <template>:
 ```
 
 It throws the same error about that semicolon placement it's wanting:
+
+```shell
 [plugin:vite:vue] Transform failed with 1 error:
 C:/Laragon/www/Vue-TS-Prj-Template-2025/src/components/WelcomeInViteWorld.vue:31:37: ERROR: Expected ";" but found "ADPCBanner"
 
@@ -195,8 +204,9 @@ Expected ";" but found "ADPCBanner"
 30 | import { createCommentVNode as \_createCommentVNode, createElementVNode as \_createElementVNode, toDisplayString as \_toDisplayString, createTextVNode as \_createTextVNode, createStaticVNode as \_createStaticVNode, Fragment as \_Fragment, openBlock as \_openBlock, createElementBlock as \_createElementBlock } from "vue"
 31 | import \_imports_0 from 'getImageUrl('ADPCBanner', 'jpeg')'
 | ^
-32 |  
+32 |
 33 |
+```
 
 The error indicates that the Vite build system is misinterpreting your `getImageUrl` function usage in the `<template>` section. This happens because Vue templates treat expressions in attributes as JavaScript code, but string literals like `'getImageUrl('ADPCBanner', 'jpeg')'` are not parsed properly.
 
@@ -204,7 +214,7 @@ The issue lies in how the `getImageUrl` function is used in the `<img>` `src` at
 
 ---
 
-### Fix the `<template>` Section:
+### Fix the `<template>` Section
 
 Here’s the corrected code:
 
@@ -221,7 +231,7 @@ Here’s the corrected code:
 
 ---
 
-### Key Corrections:
+### Key Corrections
 
 1. **Dynamic Binding**: Changed `src="getImageUrl('ADPCBanner', 'jpeg')"` to `:src="getImageUrl('ADPCBanner', 'jpeg')"`.
 
@@ -232,7 +242,7 @@ Here’s the corrected code:
 
 ---
 
-### Full Working Component:
+### Full Working Component
 
 Here’s the complete fixed Vue component:
 
@@ -263,14 +273,14 @@ function getImageUrl(name: string, ext: string): string {
 
 ---
 
-### Explanation of the Fix:
+### Explanation of the Fix
 
 - The function `getImageUrl` generates the correct `src` URL dynamically, but you need to ensure Vue processes it as JavaScript within the template.
 - Using `:src` binds the result of `getImageUrl` as the value of the `src` attribute.
 
 ---
 
-### Debugging Tips:
+### Debugging Tips
 
 1. **Ensure Images Exist**: Verify that the image files are present in `src/assets/images/` and have the correct names and extensions.
 2. **Check Vite Cache**: If the error persists, try clearing Vite’s cache:
@@ -283,7 +293,7 @@ Let me know if this resolves the issue! 🚀
 
 ---
 
-### Hotkeys:
+### Hotkeys
 
 - **W**: Yes, Continue  
   Confirm functionality and next steps.
