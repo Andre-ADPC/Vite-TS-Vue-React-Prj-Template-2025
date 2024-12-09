@@ -16,9 +16,7 @@ const count = ref(0)
     <!-- Underlying Hero Image -->
     <div class="relative h-screen w-full">
       <img src="/og-proj-sm01.webp" alt="Background Image" class="hero-image" />
-      <!--
       <div class="absolute inset-0 bg-black bg-opacity-0"></div>
-    -->
       <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-0">
         <div class="relative z-20 mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl text-center">
