@@ -11,7 +11,7 @@ const count = ref(0)
 
 <template>
   <div class="bg-white">
-    <header class="bg-green-500 text-white text-center py-12">
+    <header class="bg-green-700 text-white text-center py-12">
       <h1 class="text-4xl font-bold mt-16">About Us</h1>
     </header>
 
@@ -33,7 +33,7 @@ const count = ref(0)
       </div>
     </section>
 
-    <section class="bg-green-500 text-white py-12 px-4">
+    <section class="bg-green-700 text-white py-12 px-4">
       <h2 class="text-2xl font-bold text-center">Our Vision</h2>
       <p class="mt-4 text-center max-w-2xl mx-auto">
         Application development solutions anytime, anywhere. We aim to revolutionize the application development
@@ -44,16 +44,16 @@ const count = ref(0)
     <section class="text-center py-12 px-4">
       <h2 class="text-2xl font-bold">Our Application Development Solution Specialties</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-8">
-        <div class="p-4 shadow-lg rounded-lg bg-green-100 hover:bg-green-200 transition-colors">
+        <div class="p-4 shadow-lg rounded-lg bg-green-200 hover:bg-green-300 transition-colors">
           <h3 class="text-xl font-bold">Domain-Driven Design</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-100 hover:bg-green-200 transition-colors">
+        <div class="p-4 shadow-lg rounded-lg bg-green-200 hover:bg-green-300 transition-colors">
           <h3 class="text-xl font-bold">Model-Driven Development</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-100 hover:bg-green-200 transition-colors">
+        <div class="p-4 shadow-lg rounded-lg bg-green-200 hover:bg-green-300 transition-colors">
           <h3 class="text-xl font-bold">Behaviour-Driven Development</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-100 hover:bg-green-200 transition-colors">
+        <div class="p-4 shadow-lg rounded-lg bg-green-200 hover:bg-green-300 transition-colors">
           <h3 class="text-xl font-bold">Test-Driven Development</h3>
         </div>
       </div>
@@ -80,17 +80,17 @@ const count = ref(0)
           <h3 class="text-xl font-bold">Agentic AI Development</h3>
           <p class="para-scope">
             We are not only referring to "Talking Heads" here. We develop various AI-based solutions and integrate them
-            with your Business solutions. From first gereration AI Chat-Assistants through to the leading-edge Agentic
-            AI solutions and beyond while leveraging both public data and LLMs as well as Agents which will work oand
+            with your Business solutions. From first generation AI Chat-Assistants through to the leading-edge Agentic
+            AI solutions and beyond while leveraging both public data and LLMs as well as Agents which will work and
             apply your business' private data and self-hosted LLM solutions.
           </p>
         </div>
         <div class="p-4 shadow-lg rounded-lg bg-white hover:shadow-xl transition-shadow">
-          <h3 class="text-xl font-bold">Website and Webapp Devlopment</h3>
+          <h3 class="text-xl font-bold">Website and Webapp Development</h3>
           <p class="para-scope">
-            We create encrypted, secure, authentiacted yet easy access options to your business' websites and
-            applications. Your business will be reachable from anywhere in the world, while being regional-concious, and
-            available in all the languages your business needs to function in.
+            We create encrypted, secure, authenticated yet easy access options to your business' websites and
+            applications. Your business will be reachable from anywhere in the world, while being regional-conscious,
+            and available in all the languages your business needs to function in.
           </p>
         </div>
       </div>
@@ -103,33 +103,33 @@ const count = ref(0)
         alongside you on the path of future possibilities.
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-8">
-        <div class="p-4 shadow-lg rounded-lg bg-green-100 hover:bg-green-200 transition-colors">
+        <div class="p-4 shadow-lg rounded-lg bg-green-200 hover:bg-green-300 transition-colors">
           <h3 class="text-xl font-bold">Book an Appointment</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-100 hover:bg-green-200 transition-colors">
+        <div class="p-4 shadow-lg rounded-lg bg-green-200 hover:bg-green-300 transition-colors">
           <h3 class="text-xl font-bold">Connect With Well-Informed Team Members</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-100 hover:bg-green-200 transition-colors">
+        <div class="p-4 shadow-lg rounded-lg bg-green-200 hover:bg-green-300 transition-colors">
           <h3 class="text-xl font-bold">Total Transparency and Common Sense</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-100 hover:bg-green-200 transition-colors">
+        <div class="p-4 shadow-lg rounded-lg bg-green-200 hover:bg-green-300 transition-colors">
           <h3 class="text-xl font-bold">Dive Into Deeper Consultation With Us</h3>
         </div>
       </div>
     </section>
 
-    <section class="bg-green-500 text-white text-center py-12 px-4">
+    <section class="bg-green-700 text-white text-center py-12 px-4">
       <h2 class="text-2xl font-bold">Client Testimonials</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8 max-w-5xl mx-auto">
-        <div class="p-4 shadow-lg rounded-lg bg-green-600 hover:bg-green-500 transition-colors">
+        <div class="p-4 shadow-lg rounded-lg bg-green-700 hover:bg-green-500 transition-colors">
           <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet tristique mi."</p>
           <h3 class="mt-4 font-bold">- Client A</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-600 hover:bg-green-500 transition-colors">
+        <div class="p-4 shadow-lg rounded-lg bg-green-700 hover:bg-green-500 transition-colors">
           <p>"Nullam ac augue eget diam posuere vehicula. Vivamus quis nulla ac justo euismod posuere."</p>
           <h3 class="mt-4 font-bold">- Client B</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-600 hover:bg-green-500 transition-colors">
+        <div class="p-4 shadow-lg rounded-lg bg-green-700 hover:bg-green-500 transition-colors">
           <p>"Fusce tincidunt, arcu nec vestibulum tincidunt, eros massa ullamcorper urna."</p>
           <h3 class="mt-4 font-bold">- Client C</h3>
         </div>
@@ -162,7 +162,7 @@ const count = ref(0)
       </div>
     </section>
 
-    <footer class="bg-green-500 text-white text-center py-8">
+    <footer class="bg-green-700 text-white text-center py-8">
       <p>&copy; Copyright [Your Name] . All rights reserved. Made By [Your Dev Agency]</p>
     </footer>
   </div>
@@ -173,7 +173,7 @@ const count = ref(0)
   color: #41b883;
 }
 .para-scope {
-  @apply font-mono para-scope;
+  @apply font-mono;
 }
 .h1-scoped {
   @apply text-3xl font-bold underline underline-offset-8;
