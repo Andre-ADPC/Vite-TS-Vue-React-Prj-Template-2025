@@ -22,7 +22,7 @@ We typically setup a Jenkins project as follows:
 
 Perhaps you have worked on projects before where the building process and Jenkins were part of the admin team. As frontend developers you might have had difficulties to introduce new processes and steps in the CI/CD pipeline and it possibly constrained you to apply new technologies.
 
-Hopefully, the solutions presented here can aleviate some of those growth-pains.
+Hopefully, the solutions presented here can alleviate some of those growth-pains.
 
 ## Installing Project Dependencies
 
@@ -30,7 +30,7 @@ In a typical CI/CD scenario the following is often the norm:
 
 It is a common but poor practice to install dependencies in CI pipelines using the general package manager installation commands:
 
-Usint the following Package Manager Commands:
+Using the following Package Manager Commands:
 
 ```bash
 ni            # The Ni Package Manager
