@@ -10,7 +10,7 @@ For details on how the Project Template is structured, a VitePress Documentation
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-Refer to the `.vscode` configuration file for the recommended extensions. Should other IDEs be preferred, please refer to thier respective extension marketplaces for suitable equivalents.
+Refer to the `.vscode` configuration file for the recommended extensions. Should other IDEs be preferred, please refer to their respective extension marketplaces for suitable equivalents.
 
 ## Type Support for `.vue` Imports in TS
 
@@ -24,7 +24,7 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 
 ## Project DevOps Employs a Jenkins CI/CD Workflow
 
-The project is served by a locally installed Jenkins Server tunnelled to GithHub via Cloudflare's tunelling technology. This specific template project will thus be kept up to date and managed in a suitable CI/CD pipeline workflow suited to the various and dynamic platform and framework integrations.
+The project is served by a locally installed Jenkins Server tunnelled to GitHub via Cloudflare's tunnelling technology. This specific template project will thus be kept up to date and managed in a suitable CI/CD pipeline workflow suited to the various and dynamic platform and framework integrations.
 
 ## Detailed Project Scope
 
