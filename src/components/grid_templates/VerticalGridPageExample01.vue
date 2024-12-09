@@ -66,21 +66,21 @@ const count = ref(0)
     <section class="bg-gray-100 py-12 px-4">
       <h2 class="text-2xl font-bold text-center">State-Of-The-Art Technology</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 max-w-5xl mx-auto">
-        <div class="p-4 shadow-lg rounded-lg bg-white hover:shadow-xl transition-shadow">
+        <div class="card-2">
           <h3 class="text-2xl font-bold underline underline-offset-8">Advanced Business Implementations</h3>
           <p class="para-scope">
             We utilize the latest Software Technologies for designing and developing accurate, scalable and sustainable
             business solutions.
           </p>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-white hover:shadow-xl transition-shadow">
+        <div class="card-3">
           <h3 class="text-2xl font-bold underline underline-offset-8">Virtual Meetings & Consultation</h3>
           <p class="para-scope">
             Consult with our specialists from the comfort of your office or home to address your requirements in a
             relaxed, yet focussed environment.
           </p>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-white hover:shadow-xl transition-shadow">
+        <div class="card-2">
           <h3 class="text-2xl font-bold underline underline-offset-8">Agentic AI Development</h3>
           <p class="para-scope">
             We are not only referring to "Talking Heads" here. We develop various AI-based solutions and integrate them
@@ -89,7 +89,7 @@ const count = ref(0)
             apply your business' private data and self-hosted LLM solutions.
           </p>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-white hover:shadow-xl transition-shadow">
+        <div class="card-3">
           <h3 class="text-2xl font-bold underline underline-offset-8">Website and Webapp Development</h3>
           <p class="para-scope">
             We create encrypted, secure, authenticated yet easy access options to your business' websites and
@@ -125,15 +125,15 @@ const count = ref(0)
     <section class="bg-green-700 text-white text-center py-12 px-4">
       <h2 class="text-3xl font-bold text-center mt-14">Client Testimonials</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8 max-w-5xl mx-auto">
-        <div class="p-4 shadow-lg rounded-lg bg-green-700 hover:bg-green-500 transition-colors">
+        <div class="p-4 shadow-lg rounded-lg bg-green-600 hover:bg-green-400 transition-colors">
           <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet tristique mi."</p>
           <h3 class="mt-4 font-bold">- Client A</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-700 hover:bg-green-500 transition-colors">
+        <div class="p-4 shadow-lg rounded-lg bg-green-600 hover:bg-green-400 transition-colors">
           <p>"Nullam ac augue eget diam posuere vehicula. Vivamus quis nulla ac justo euismod posuere."</p>
           <h3 class="mt-4 font-bold">- Client B</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-700 hover:bg-green-500 transition-colors">
+        <div class="p-4 shadow-lg rounded-lg bg-green-600 hover:bg-green-400 transition-colors">
           <p>"Fusce tincidunt, arcu nec vestibulum tincidunt, eros massa ullamcorper urna."</p>
           <h3 class="mt-4 font-bold">- Client C</h3>
         </div>
@@ -143,20 +143,20 @@ const count = ref(0)
     <section class="text-center py-12 px-4 w-full">
       <h2 class="text-3xl font-bold text-center mt-14">Get Answers To the Most Frequently Asked Questions</h2>
       <div class="mt-8">
-        <div class="p-4 border rounded-lg shadow-md transition transform hover:scale-100 scale-90">
+        <div class="card-2">
           <h3 class="text-2xl font-bold underline underline-offset-8">How do I make an appointment online?</h3>
           <p class="para-scope">
             You can book an appointment online through our website or mobile app from
             [here](https://link.to.appointment.ui).
           </p>
         </div>
-        <div class="p-4 border rounded-lg shadow-md transition transform hover:scale-100 scale-90 mt-4">
+        <div class="card-3">
           <h3 class="text-2xl font-bold underline underline-offset-8">What types of software tests do you offer?</h3>
           <p class="para-scope">
             We offer a wide range of software tests including End-to-End tests, CI/CD pipelines, and more.
           </p>
         </div>
-        <div class="p-4 border rounded-lg shadow-md transition transform hover:scale-100 scale-90 mt-4">
+        <div class="card-2">
           <h3 class="text-2xl font-bold underline underline-offset-8">Do you accept payment plans?</h3>
           <p class="para-scope">
             Yes, we accept most common payment-settlement plans. Chat to us to discover how we could leverage your
@@ -176,8 +176,14 @@ const count = ref(0)
 .read-the-docs {
   color: #41b883;
 }
+.card-2 {
+  @apply p-4 border rounded-lg shadow-md bg-green-600 hover:bg-green-400  transition transform hover:scale-100 scale-90;
+}
+.card-3 {
+  @apply p-4 border rounded-lg shadow-md bg-gray-100 hover:bg-gray-200  transition transform hover:scale-100 scale-90;
+}
 .para-scope {
-  @apply font-mono;
+  @apply font-mono mt-6;
 }
 .h1-scoped {
   @apply text-4xl font-bold mt-16;
