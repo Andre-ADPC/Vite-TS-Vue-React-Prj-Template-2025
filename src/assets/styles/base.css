@@ -3,29 +3,22 @@
 @tailwind utilities;
 
 /* Our Unique Branded Class-base Color Palette - Helps us keep track between --tw classes and our own setup */
+
+/* Semantic Colour Variables for This Project */
 :root {
-  --adpc-c-white: #ffffff;
-  --adpc-c-white-soft: #f8f8f8;
-  --adpc-c-white-mute: #f2f2f2;
+  --color-text: var(--adpc-c-text-light-1, #2c3e50); /* Fallback for safety */
+  --color-heading: var(--adpc-c-text-light-1, #2c3e50);
+  --color-background: var(--adpc-c-white, #ffffff);
 
-  --adpc-c-black: #181818;
-  --adpc-c-black-soft: #222222;
-  --adpc-c-black-mute: #282828;
+  --color-primary: hsla(160, 100%, 37%, 1); /* Button/CTA */
+  --color-primary-hover: hsla(160, 100%, 45%, 1);
+  --color-primary-muted: hsla(160, 50%, 75%, 1);
 
-  --adpc-c-indigo: #2c3e50;
-
-  --adpc-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --adpc-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --adpc-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --adpc-c-divider-dark-2: rgba(84, 84, 84, 0.48);
-
-  --adpc-c-text-light-1: var(--adpc-c-indigo);
-  --adpc-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --adpc-c-text-dark-1: var(--adpc-c-white);
-  --adpc-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --section-gap: 160px;
 }
 
-/* semantic color variables for this project */
+/* Optional Semantic Colour Variables for This Project */
+/*
 :root {
   --color-background: var(--adpc-c-white);
   --color-background-soft: var(--adpc-c-white-soft);
@@ -39,19 +32,35 @@
 
   --section-gap: 160px;
 }
+  */
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--adpc-c-black);
-    --color-background-soft: var(--adpc-c-black-soft);
-    --color-background-mute: var(--adpc-c-black-mute);
+    --color-text: var(--adpc-c-text-dark-1, #f2f2f2);
+    --color-heading: var(--adpc-c-text-dark-1, #f2f2f2);
+    --color-background: var(--adpc-c-black, #181818);
 
-    --color-border: var(--adpc-c-divider-dark-2);
-    --color-border-hover: var(--adpc-c-divider-dark-1);
-
-    --color-heading: var(--adpc-c-text-dark-1);
-    --color-text: var(--adpc-c-text-dark-2);
+    --color-primary: hsla(160, 100%, 45%, 1); /* Brighter for dark mode */
+    --color-primary-hover: hsla(160, 100%, 55%, 1);
+    --color-primary-muted: hsla(160, 50%, 85%, 1);
   }
+}
+
+.btn {
+  @apply inline-block px-4 py-2 rounded-lg text-white transition-colors;
+  background-color: var(--color-primary);
+}
+
+.btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.card {
+  @apply p-4 shadow-lg rounded-lg transition-transform;
+  background-color: var(--color-background);
+}
+.card:hover {
+  transform: scale(1.05);
 }
 
 *,
@@ -64,12 +73,14 @@
 
 body {
   min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
+  /*color: var(--color-text);*/
+  font-size: 16px;
+  line-height: 1.8; /* Enhance text legibility */
+  background-color: var(--color-background);
   transition:
-    color 0.5s,
-    background-color 0.5s;
-  line-height: 1.6;
+    background-color 0.3s ease,
+    color 0.3s ease;
+
   font-family:
     Inter,
     -apple-system,
@@ -83,7 +94,7 @@ body {
     'Droid Sans',
     'Helvetica Neue',
     sans-serif;
-  font-size: 15px;
+
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
