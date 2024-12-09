@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import WelcomeInViteWorld from './components/WelcomeInViteWorld.vue'
+import WelcomeInViteWorld from './components/grid_templates/VerticalGridPageExample01.vue'
 
 // Dynamic Asset Loading Where required
 function getImageUrl(name: string, ext: string): string {
