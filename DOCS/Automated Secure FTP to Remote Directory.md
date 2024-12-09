@@ -25,6 +25,6 @@ Before we fork off into a Linux variant of WinCSP, let's stick to Windows, and W
 
 **We assume the following:**
 
-- We have a Jenkins Server installed on Windows 10, and we'll adapt this process for Winsows 11 in parallel as we develop a solution.
+- We have a Jenkins Server installed on Windows 10, and we'll adapt this process for Windows 11 in parallel as we develop a Win-OS solution.
 - We have a registered TLD, hosted on a Shared Virtual Private Server (VPS) (assume Hetzner Cloud, which should be applicable to other vendors as well) accessible via a CDN service like Cloudflare.
-- We have a Private or Public Repository on GitHub and have configured a webhook to instruct Jenkins that commits were made from a local IDE dev environment the Repo
+- We have a Private or Public Repository on GitHub and have configured a tested webhook to instruct Jenkins that commits were made from a local IDE dev environment the GitHub Repo, via the local IDE.
