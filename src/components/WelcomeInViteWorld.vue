@@ -11,7 +11,7 @@ const count = ref(0)
 
 <template>
   <section
-    class="relative overflow-hidden bg-gradient-to-b from-blue-50 via-transparent to-transparent pb-10 pt-10 sm:pb-16 sm:pt-16 lg:pb-24 lg:pt-24 xl:pb-32 xl:pt-40"
+    class="relative overflow-hidden bg-gradient-to-b from-blue-50 via-transparent to-transparent pb-10 pt-10 sm:pb-16 sm:pt-16 lg:pb-24 lg:pt-24 xl:pb-32 xl:pt-40 mt-10"
   >
     <!-- Underlying Hero Image -->
     <div class="relative h-screen w-full">
