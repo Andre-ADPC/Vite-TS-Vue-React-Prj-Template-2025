@@ -18,9 +18,12 @@ TypeScript cannot handle type information for `.vue` imports by default, so we r
 
 Strict Types are applied by default, and various TypeScript IDE tools are used to assist with making the DX clear, controlled and feature-rich, while driven by high quality standards, and practices.
 
+We have added all the key _VS Code Extensions_ we use under the `.vscode` folder. Look out for the `extensions.json` file, they are listed there.
+
 ## Customize configuration
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+See the [Vite Configuration Reference](https://vite.dev/config/).
+See the [TypeScript TSConfig Reference](https://www.typescriptlang.org/tsconfig/).
 
 ## Project DevOps Employs a Jenkins CI/CD Workflow
 
