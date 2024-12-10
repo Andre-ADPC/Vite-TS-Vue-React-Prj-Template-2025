@@ -10,14 +10,14 @@ const count = ref(0)
 </script>
 
 <template>
+  <!-- Navigation Section-->
+  <header class="bg-green-700 text-white text-center py-12">
+    <div>
+      <h3 class="h3-scoped mt-10">{{ msg }}</h3>
+    </div>
+    <h1 class="text-4xl font-bold mt-16">About Us</h1>
+  </header>
   <div class="bg-white">
-    <header class="bg-green-700 text-white text-center py-12">
-      <div>
-        <h3 class="h3-scoped mt-10">{{ msg }}</h3>
-      </div>
-      <h1 class="text-4xl font-bold mt-16">About Us</h1>
-    </header>
-
     <section class="text-center py-12 px-4">
       <h2 class="h2-scoped">Mission And Values</h2>
       <p class="mt-4 text-gray-700 max-w-2xl mx-auto">
