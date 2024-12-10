@@ -13,13 +13,13 @@ const count = ref(0)
   <div class="bg-white">
     <header class="bg-green-700 text-white text-center py-12">
       <div>
-        <h3 class="h3-scoped">{{ msg }}</h3>
+        <h3 class="h3-scoped mt-10">{{ msg }}</h3>
       </div>
       <h1 class="text-4xl font-bold mt-16">About Us</h1>
     </header>
 
     <section class="text-center py-12 px-4">
-      <h2 class="text-3xl font-bold text-center mt-14">Mission And Values</h2>
+      <h2 class="h2-scoped">Mission And Values</h2>
       <p class="mt-4 text-gray-700 max-w-2xl mx-auto">
         Our mission is to provide exceptional business application development solutions services with a focus on
         availability, reliability, and continued support. We don't do "code". We engineer solutions, from all involved
@@ -27,11 +27,11 @@ const count = ref(0)
       </p>
       <div class="flex justify-center space-x-8 mt-8 animate-fadeIn">
         <div class="transition transform hover:scale-110">
-          <h3 class="text-2xl font-bold underline underline-offset-8">8+</h3>
+          <h3 class="h3-scoped">8+</h3>
           <p class="text-gray-700">Specialists</p>
         </div>
         <div class="transition transform hover:scale-110">
-          <h3 class="text-2xl font-bold underline underline-offset-8">15+</h3>
+          <h3 class="h3-scoped">15+</h3>
           <p class="text-gray-700">Years of Experience</p>
         </div>
       </div>
@@ -46,19 +46,19 @@ const count = ref(0)
     </section>
 
     <section class="text-center py-12 px-4">
-      <h2 class="text-3xl font-bold text-center mt-14">Our Application Development Solution Specialties</h2>
+      <h2 class="h2-scoped">Our Application Development Solution Specialties</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-8">
-        <div class="p-4 shadow-lg rounded-lg bg-green-200 hover:bg-green-300 transition-colors">
-          <h3 class="text-2xl font-bold underline underline-offset-8">Domain-Driven Design</h3>
+        <div class="card-1">
+          <h3 class="h3-scoped">Domain-Driven Design</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-200 hover:bg-green-300 transition-colors">
-          <h3 class="text-2xl font-bold underline underline-offset-8">Model-Driven Development</h3>
+        <div class="card-1">
+          <h3 class="h3-scoped">Model-Driven Development</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-200 hover:bg-green-300 transition-colors">
-          <h3 class="text-2xl font-bold underline underline-offset-8">Behaviour-Driven Development</h3>
+        <div class="card-1">
+          <h3 class="h3-scoped">Behaviour-Driven Development</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-200 hover:bg-green-300 transition-colors">
-          <h3 class="text-2xl font-bold underline underline-offset-8">Test-Driven Development</h3>
+        <div class="card-1">
+          <h3 class="h3-scoped">Test-Driven Development</h3>
         </div>
       </div>
     </section>
@@ -67,21 +67,21 @@ const count = ref(0)
       <h2 class="text-2xl font-bold text-center">State-Of-The-Art Technology</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 max-w-5xl mx-auto">
         <div class="card-2">
-          <h3 class="text-2xl font-bold underline underline-offset-8">Advanced Business Implementations</h3>
+          <h3 class="h3-scoped">Advanced Business Implementations</h3>
           <p class="para-scope">
             We utilize the latest Software Technologies for designing and developing accurate, scalable and sustainable
             business solutions.
           </p>
         </div>
         <div class="card-3">
-          <h3 class="text-2xl font-bold underline underline-offset-8">Virtual Meetings & Consultation</h3>
+          <h3 class="h3-scoped">Virtual Meetings & Consultation</h3>
           <p class="para-scope">
             Consult with our specialists from the comfort of your office or home to address your requirements in a
             relaxed, yet focussed environment.
           </p>
         </div>
         <div class="card-2">
-          <h3 class="text-2xl font-bold underline underline-offset-8">Agentic AI Development</h3>
+          <h3 class="h3-scoped">Agentic AI Development</h3>
           <p class="para-scope">
             We are not only referring to "Talking Heads" here. We develop various AI-based solutions and integrate them
             with your Business solutions. From first generation AI Chat-Assistants through to the leading-edge Agentic
@@ -90,7 +90,7 @@ const count = ref(0)
           </p>
         </div>
         <div class="card-3">
-          <h3 class="text-2xl font-bold underline underline-offset-8">Website and Webapp Development</h3>
+          <h3 class="h3-scoped">Website and Webapp Development</h3>
           <p class="para-scope">
             We create encrypted, secure, authenticated yet easy access options to your business' websites and
             applications. Your business will be reachable from anywhere in the world, while being regional-conscious,
@@ -101,39 +101,39 @@ const count = ref(0)
     </section>
 
     <section class="text-center py-12 px-4">
-      <h2 class="text-3xl font-bold text-center mt-14">Committed To Your Business Health And Growth</h2>
+      <h2 class="h2-scoped">Committed To Your Business Health And Growth</h2>
       <p class="para-scope">
         There are various ways you can initiate your process of going forward and discover how we can be a partner
         alongside you on the path of future possibilities.
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-8">
-        <div class="p-4 shadow-lg rounded-lg bg-green-200 hover:bg-green-300 transition-colors">
-          <h3 class="text-2xl font-bold underline underline-offset-8">Book an Appointment</h3>
+        <div class="card-1">
+          <h3 class="h3-scoped">Book an Appointment</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-200 hover:bg-green-300 transition-colors">
-          <h3 class="text-2xl font-bold underline underline-offset-8">Connect With Well-Informed Team Members</h3>
+        <div class="card-1">
+          <h3 class="h3-scoped">Connect With Well-Informed Team Members</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-200 hover:bg-green-300 transition-colors">
-          <h3 class="text-2xl font-bold underline underline-offset-8">Total Transparency and Common Sense</h3>
+        <div class="card-1">
+          <h3 class="h3-scoped">Total Transparency and Common Sense</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-200 hover:bg-green-300 transition-colors">
-          <h3 class="text-2xl font-bold underline underline-offset-8">Dive Into Deeper Consultation With Us</h3>
+        <div class="card-1">
+          <h3 class="h3-scoped">Dive Into Deeper Consultation With Us</h3>
         </div>
       </div>
     </section>
 
     <section class="bg-green-700 text-white text-center py-12 px-4">
-      <h2 class="text-3xl font-bold text-center mt-14">Client Testimonials</h2>
+      <h2 class="h2-scoped">Client Testimonials</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8 max-w-5xl mx-auto">
-        <div class="p-4 shadow-lg rounded-lg bg-green-600 hover:bg-green-400 transition-colors">
+        <div class="card-4">
           <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet tristique mi."</p>
           <h3 class="mt-4 font-bold">- Client A</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-600 hover:bg-green-400 transition-colors">
+        <div class="card-4">
           <p>"Nullam ac augue eget diam posuere vehicula. Vivamus quis nulla ac justo euismod posuere."</p>
           <h3 class="mt-4 font-bold">- Client B</h3>
         </div>
-        <div class="p-4 shadow-lg rounded-lg bg-green-600 hover:bg-green-400 transition-colors">
+        <div class="card-4">
           <p>"Fusce tincidunt, arcu nec vestibulum tincidunt, eros massa ullamcorper urna."</p>
           <h3 class="mt-4 font-bold">- Client C</h3>
         </div>
@@ -141,23 +141,23 @@ const count = ref(0)
     </section>
 
     <section class="text-center py-12 px-4 w-full">
-      <h2 class="text-3xl font-bold text-center mt-14">Get Answers To the Most Frequently Asked Questions</h2>
+      <h2 class="h2-scoped">Get Answers To the Most Frequently Asked Questions</h2>
       <div class="mt-8">
         <div class="card-2">
-          <h3 class="text-2xl font-bold underline underline-offset-8">How do I make an appointment online?</h3>
+          <h3 class="h3-scoped">How do I make an appointment online?</h3>
           <p class="para-scope">
             You can book an appointment online through our website or mobile app from
             [here](https://link.to.appointment.ui).
           </p>
         </div>
         <div class="card-3">
-          <h3 class="text-2xl font-bold underline underline-offset-8">What types of software tests do you offer?</h3>
+          <h3 class="h3-scoped">What types of software tests do you offer?</h3>
           <p class="para-scope">
             We offer a wide range of software tests including End-to-End tests, CI/CD pipelines, and more.
           </p>
         </div>
         <div class="card-2">
-          <h3 class="text-2xl font-bold underline underline-offset-8">Do you accept payment plans?</h3>
+          <h3 class="h3-scoped">Do you accept payment plans?</h3>
           <p class="para-scope">
             Yes, we accept most common payment-settlement plans. Chat to us to discover how we could leverage your
             business cashflow to optimise the development finance outlay required
@@ -175,6 +175,12 @@ const count = ref(0)
 <style lang="postcss" scoped>
 .read-the-docs {
   color: #41b883;
+}
+.card-1 {
+  @apply p-4 shadow-lg rounded-lg bg-green-200 hover:bg-green-300 transition-colors;
+}
+.card-4 {
+  @apply p-4 shadow-lg rounded-lg bg-green-600 hover:bg-green-400 transition-colors;
 }
 .card-2 {
   @apply p-4 border rounded-lg shadow-md bg-green-600 hover:bg-green-400  transition transform hover:scale-100 scale-90;
