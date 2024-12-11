@@ -1,0 +1,34 @@
+stage('Run Tests') {
+    parallel {
+        stage('Unit Tests: Vitest') {
+            steps {
+                sh 'npm run test:unit'
+            }
+        }
+        stage('Unit Tests: Jest') {
+            steps {
+                sh 'npm run test:unit:jest'
+            }
+        }
+        stage('Component Tests: Cypress') {
+            steps {
+                sh 'npm run test:component:cypress'
+            }
+        }
+        stage('Component Tests: Playwright') {
+            steps {
+                sh 'npm run test:component:playwright'
+            }
+        }
+        stage('E2E Tests: Cypress') {
+            steps {
+                sh 'npm run test:e2e:cypress'
+            }
+        }
+        stage('E2E Tests: Playwright') {
+            steps {
+                sh 'npm run test:e2e:playwright'
+            }
+        }
+    }
+}
