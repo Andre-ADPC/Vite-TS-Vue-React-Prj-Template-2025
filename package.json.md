@@ -67,16 +67,7 @@
 "private": true,
 "type": "module",
 "scripts": {
-"dev": "vite",
-"build": "run-p type-check \"build-only {@}\" --",
-"preview": "vite preview",
-"test:unit": "vitest",
-"build-only": "vite build",
-"type-check": "vue-tsc --build --force",
-"lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
-"lint:eslint": "eslint . --ext .ts,.vue,.tsx --fix",
-"lint": "run-s lint:eslint lint:oxlint",
-"format": "prettier --write src/"
+
 },
 "dependencies": {
 "pinia": "^2.2.6",
