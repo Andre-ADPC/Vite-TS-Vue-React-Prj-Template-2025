@@ -32,3 +32,64 @@ stage('Run Tests') {
         }
     }
 }
+stage('Build Frontends') {
+    parallel {
+        stage('Build Vue') {
+            steps {
+                dir('Frontend/Vue') {
+                    sh 'npm run build:vue'
+                }
+            }
+        }
+        stage('Build React') {
+            steps {
+                dir('Frontend/React') {
+                    sh 'npm run build:react'
+                }
+            }
+        }
+    }
+}
+stage('Build Backends') {
+    parallel {
+        stage('Build WordPress') {
+            steps {
+                dir('Backend/WordPress/WP_Plugin-01') {
+                    sh 'npm run build:rest'
+                }
+            }
+        }
+        stage('Build MySQL DT-01') {
+            steps {
+                dir('Backend/Database/MySQL_DT-01') {
+                    sh 'npm run build:mysql'
+                }
+            }
+        }
+        stage('Build Postgres DT-01') {
+            steps {
+                dir('Backend/Database/PGSQL_DT-01') {
+                    sh 'npm run build:postgresql'
+                }
+            }
+        }
+    }
+}
+stage('Build APIs') {
+    parallel {
+        stage('Build REST API-01') {
+            steps {
+                dir('Backend/APIs_Rest/API_R-01') {
+                    sh 'npm run build:rest'
+                }
+            }
+        }
+        stage('Build GQL API-01') {
+            steps {
+                dir('Backend/APIs_GQL/API_G-01') {
+                    sh 'npm run build:graphql'
+                }
+            }
+        }
+    }
+}
