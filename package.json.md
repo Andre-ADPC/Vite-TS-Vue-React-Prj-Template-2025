@@ -67,6 +67,45 @@
 "private": true,
 "type": "module",
 "scripts": {
+// Development
+"dev:landing": "vite --config vite.config.ts",
+"dev:vue": "vite --config Frontend/Vue/vite.config.ts",
+"dev:react": "vite --config Frontend/React/vite.config.ts",
+"dev": "run-p dev:landing dev:vue dev:react",
+
+    // Build
+    "build:landing": "vite build --config vite.config.ts",
+    "build:vue": "vite build --config Frontend/Vue/vite.config.ts",
+    "build:react": "vite build --config Frontend/React/vite.config.ts",
+    "build:all": "run-p build:landing build:vue build:react",
+
+    // Preview
+    "preview:landing": "vite preview --config vite.config.ts",
+    "preview:vue": "vite preview --config Frontend/Vue/vite.config.ts",
+    "preview:react": "vite preview --config Frontend/React/vite.config.ts",
+    "preview": "run-p preview:landing preview:vue preview:react",
+
+    // Testing
+    "test:unit": "vitest",
+    "test:e2e:cypress": "cypress open",
+    "test:e2e:playwright": "playwright test",
+    "test:vue": "run-p test:unit test:e2e:cypress test:e2e:playwright",
+    "test:react": "jest && playwright test --project=react",
+    "test:all": "run-p test:vue test:react",
+
+    // Linting & Formatting
+    "lint": "run-s lint:eslint lint:oxlint",
+    "lint:eslint": "eslint . --ext .ts,.vue,.tsx --fix",
+    "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
+    "format": "prettier --write src/",
+
+    // Type Checking
+    "type-check:vue": "vue-tsc --build --config Frontend/Vue/tsconfig.app.json",
+    "type-check:react": "tsc --build Frontend/React/tsconfig.json",
+    "type-check:all": "run-p type-check:vue type-check:react",
+
+    // Clean
+    "clean": "npx rimraf dist"
 
 },
 "dependencies": {
@@ -110,5 +149,3 @@
 "vue-tsc": "^2.1.10"
 }
 }
-
-# The `package.json` File After Adding Tests & React
