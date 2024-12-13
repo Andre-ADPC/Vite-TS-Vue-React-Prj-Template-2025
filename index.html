@@ -1,18 +1,746 @@
 <!doctype html>
-<html lang="en-GB">
-  <!-- REVIEW THIS INDEX PAGE AND EVALUATE IF THE DATA HEREIN IS APPROPRIATE-->
+<!-- REVIEW THIS INDEX PAGE AND EVALUATE IF THE DATA HEREIN IS APPROPRIATE-->
+<html style="font-size: 16px" lang="en-GB">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./public/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./public/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./public/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./public/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A Vite, TS Vue & React App Comparison Template</title>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Vue.js,React.js, Vite.js, Multi-framework, Multi-domain" />
+    <meta
+      name="description"
+      content="A Multi-framework Comparison project, demonstrating a one-to-one evaluation between Vue.JS and React.JS functionality"
+    />
+
+    <link rel="manifest" href="./LandingPage/site.webmanifest" />
+    <title>A Multi-Framework Project Demonstration</title>
+    <link rel="stylesheet" href="./styles/adpc_projects-tw.css" media="screen" />
+    <link rel="stylesheet" href="./styles/index-tw.css" media="screen" />
+    <script class="u-script" type="text/javascript" src="./scripts/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="./scripts/adpc_projects.js" defer=""></script>
+    <meta name="generator" content="Adpc_Projects 0.0.0, projects.adpc-llc.com" />
+
+    <link id="u-theme-google-font" rel="stylesheet" href="./fonts/OpenSans.css" />
+    <link id="u-page-google-font" rel="stylesheet" href="./fonts/Roboto.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Demo HTML SPA",
+        "logo": "images/FrameworkBlurr-Logo-1.png",
+        "sameAs": [
+          "https://vite.dev/",
+          "https://www.typescriptlang.org/",
+          "https://vuejs.org/",
+          "https://react.dev/",
+          "https://github.com/Andre-ADPC",
+          "https://www.linkedin.com/in/andre-du-plessis-992a0329",
+          "https://stackoverflow.com/users/19977074/andre?tab=profile",
+          "https://www.facebook.com/RedDragonX5",
+          "https://x.com/AndreDuP_ADPC",
+          "https://dev.to/andre57",
+          "https://andreduplessis.substack.com/",
+          "https://bsky.app/profile/andre-dup.bsky.social"
+        ]
+      }
+    </script>
+    <meta name="theme-color" content="#47c6fd" />
+    <meta property="og:title" content="Home" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta data-intl-tel-input-cdn-path="intlTelInput/" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="./Frontend/Vue/src/main.ts"></script>
+    <header class="ADPC-leading-6 ADPC-text-neutral-900" id="header" style="border-spacing: 0px; list-style: outside">
+      <div class="ADPC-leading-6 ADPC-text-neutral-900" style="border-spacing: 0px; list-style: outside">
+        <a
+          href="https://frameworkblurr.adpc-llc.com"
+          class="ADPC-leading-6 ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-neutral-900"
+          data-image-width="580"
+          data-image-height="290"
+          title="FrameWork Blurr"
+          style="border-spacing: 0px; list-style: outside"
+        >
+          <img
+            src="./FrameworkBlurr-Logo-1.png"
+            class="ADPC-leading-6 ADPC-text-indigo-500 ADPC-whitespace-nowrap ADPC-cursor-pointer"
+            style="border-spacing: 0px; list-style: outside"
+          />
+        </a>
+        <nav
+          class="ADPC-leading-4 ADPC-text-left ADPC-whitespace-nowrap ADPC-text-neutral-900"
+          style="border-spacing: 0px; list-style: outside"
+        >
+          <div
+            class="ADPC-text-base ADPC-font-bold ADPC-tracking-normal ADPC-leading-4 ADPC-text-left ADPC-whitespace-nowrap ADPC-text-neutral-900"
+            style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; border-spacing: 0px; list-style: outside"
+          >
+            <a
+              class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-neutral-900"
+              href="#"
+              style="border-spacing: 0px; list-style: outside"
+            >
+              <svg
+                class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-neutral-900"
+                preserveAspectRatio="xMidYMin slice"
+                viewBox="0 0 302 302"
+                style="border-spacing: 0px; list-style: outside"
+              >
+                <use
+                  xlink:href="#svg-8a8f"
+                  class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside"
+                ></use>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                id="svg-8a8f"
+                x="0px"
+                y="0px"
+                viewBox="0 0 302 302"
+                style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                xml:space="preserve"
+                class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+              >
+                <g
+                  class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                >
+                  <rect
+                    y="36"
+                    width="302"
+                    height="30"
+                    class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                    style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                  ></rect>
+                  <rect
+                    y="236"
+                    width="302"
+                    height="30"
+                    class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                    style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                  ></rect>
+                  <rect
+                    y="136"
+                    width="302"
+                    height="30"
+                    class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                    style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                  ></rect>
+                </g>
+                <g
+                  class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                ></g>
+                <g
+                  class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                ></g>
+                <g
+                  class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                ></g>
+                <g
+                  class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                ></g>
+                <g
+                  class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                ></g>
+                <g
+                  class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                ></g>
+                <g
+                  class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                ></g>
+                <g
+                  class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                ></g>
+                <g
+                  class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                ></g>
+                <g
+                  class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                ></g>
+                <g
+                  class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                ></g>
+                <g
+                  class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                ></g>
+                <g
+                  class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                ></g>
+                <g
+                  class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                ></g>
+                <g
+                  class="ADPC-text-base ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-cursor-pointer ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside; white-space: preserve-spaces"
+                ></g>
+              </svg>
+            </a>
+          </div>
+          <div
+            class="ADPC-leading-4 ADPC-text-left ADPC-whitespace-nowrap ADPC-text-neutral-900"
+            style="border-spacing: 0px; list-style: outside"
+          >
+            <ul
+              class="ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-whitespace-nowrap ADPC-text-neutral-900"
+              style="border-spacing: 0px; list-style: none"
+            >
+              <li
+                class="ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-whitespace-nowrap ADPC-text-neutral-900"
+                style="border-spacing: 0px; list-style: none"
+              >
+                <a
+                  class="ADPC-p-2 ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-text-indigo-400 ADPC-whitespace-nowrap ADPC-cursor-pointer"
+                  href="./landing.html"
+                  style="padding: 10px; border-spacing: 0px; list-style: none"
+                  >Home</a
+                >
+              </li>
+              <li
+                class="ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-whitespace-nowrap ADPC-text-neutral-900"
+                style="border-spacing: 0px; list-style: none"
+              >
+                <a
+                  class="ADPC-p-2 ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-zinc-900"
+                  href="./Frontend/Vue/index.html"
+                  style="padding: 10px; border-spacing: 0px; list-style: none"
+                  >Vue.JS Project</a
+                >
+              </li>
+              <li
+                class="ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-whitespace-nowrap ADPC-text-neutral-900"
+                style="border-spacing: 0px; list-style: none"
+              >
+                <a
+                  class="ADPC-p-2 ADPC-font-bold ADPC-leading-4 ADPC-text-left ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-zinc-900"
+                  href="./Frontend/React/index.html"
+                  style="padding: 10px; border-spacing: 0px; list-style: none"
+                  >React.JS Project</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="ADPC-leading-4 ADPC-text-left ADPC-whitespace-nowrap ADPC-text-neutral-900"
+            style="border-spacing: 0px; list-style: outside"
+          >
+            <div
+              class="ADPC-leading-4 ADPC-text-center ADPC-text-stone-300"
+              style="border-spacing: 0px; list-style: outside"
+            >
+              <div
+                class="ADPC-leading-4 ADPC-text-center ADPC-text-stone-300"
+                style="border-spacing: 0px; list-style: outside"
+              >
+                <div
+                  class="ADPC-leading-4 ADPC-text-center ADPC-text-stone-300"
+                  style="border-spacing: 0px; list-style: outside"
+                ></div>
+                <ul
+                  class="ADPC-leading-4 ADPC-text-center ADPC-whitespace-nowrap ADPC-text-stone-300"
+                  style="border-spacing: 0px; list-style: none"
+                >
+                  <li
+                    class="ADPC-leading-4 ADPC-text-center ADPC-whitespace-nowrap ADPC-text-stone-300"
+                    style="border-spacing: 0px; list-style: none"
+                  >
+                    <a
+                      class="ADPC-leading-4 ADPC-text-center ADPC-cursor-pointer ADPC-text-stone-300"
+                      href="./landing.html"
+                      style="border-spacing: 0px; list-style: none"
+                      >Home</a
+                    >
+                  </li>
+                  <li
+                    class="ADPC-leading-4 ADPC-text-center ADPC-whitespace-nowrap ADPC-text-stone-300"
+                    style="border-spacing: 0px; list-style: none"
+                  >
+                    <a
+                      class="ADPC-leading-4 ADPC-text-center ADPC-cursor-pointer ADPC-text-stone-300"
+                      href="./Frontend/Vue/index.html"
+                      style="border-spacing: 0px; list-style: none"
+                      >Vue.JS Project</a
+                    >
+                  </li>
+                  <li
+                    class="ADPC-leading-4 ADPC-text-center ADPC-whitespace-nowrap ADPC-text-stone-300"
+                    style="border-spacing: 0px; list-style: none"
+                  >
+                    <a
+                      class="ADPC-leading-4 ADPC-text-center ADPC-cursor-pointer ADPC-text-stone-300"
+                      href="./Frontend/React/index.html"
+                      style="border-spacing: 0px; list-style: none"
+                      >React.JS Project</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="ADPC-leading-4 ADPC-text-left ADPC-whitespace-nowrap ADPC-text-stone-300"
+              style="border-spacing: 0px; list-style: outside"
+            ></div>
+          </div>
+        </nav>
+        <div
+          class="ADPC-leading-6 ADPC-whitespace-nowrap ADPC-text-neutral-900"
+          style="border-spacing: 0px; list-style: outside"
+        >
+          <a
+            class="ADPC-leading-6 ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-neutral-900"
+            title="Vite | Next Generation Frontend Tooling"
+            target="_blank"
+            href="https://vite.dev/"
+            style="border-spacing: 0px; list-style: outside"
+          >
+            <span
+              class="ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-neutral-900"
+              style="border-spacing: 0px; line-height: 0px; list-style: outside"
+            >
+              <img
+                src="./images/vite-icon.png"
+                alt="Vite Icon"
+                class="ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-neutral-900"
+                style="border-spacing: 0px; line-height: 0px; list-style: outside"
+              />
+            </span>
+          </a>
+          <a
+            class="ADPC-leading-6 ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-neutral-900"
+            title="TypeScript: JavaScript With Syntax For Types"
+            target="_blank"
+            href="https://www.typescriptlang.org/"
+            style="border-spacing: 0px; list-style: outside"
+          >
+            <span
+              class="ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-neutral-900"
+              style="border-spacing: 0px; line-height: 0px; list-style: outside"
+            >
+              <img
+                src="./images/typescript-icon.png"
+                alt="TypeScript Icon"
+                class="ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-neutral-900"
+                style="border-spacing: 0px; line-height: 0px; list-style: outside"
+              />
+            </span>
+          </a>
+          <a
+            class="ADPC-leading-6 ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-neutral-900"
+            title="Vue.js | The Progressive JavaScript Framework"
+            target="_blank"
+            href="https://vuejs.org/"
+            style="border-spacing: 0px; list-style: outside"
+          >
+            <span
+              class="ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-neutral-900"
+              style="border-spacing: 0px; line-height: 0px; list-style: outside"
+            >
+              <img
+                src="./images/vue-icon.png"
+                alt="Vue Icon"
+                class="ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-neutral-900"
+                style="border-spacing: 0px; line-height: 0px; list-style: outside"
+              />
+            </span>
+          </a>
+          <a
+            class="ADPC-leading-6 ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-neutral-900"
+            target="_blank"
+            title="React"
+            href="https://react.dev/"
+            style="border-spacing: 0px; list-style: outside"
+          >
+            <span
+              class="ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-neutral-900"
+              style="border-spacing: 0px; line-height: 0px; list-style: outside"
+            >
+              <img
+                src="./images/react-icon.png"
+                alt="React Icon"
+                class="ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-neutral-900"
+                style="border-spacing: 0px; line-height: 0px; list-style: outside"
+              />
+            </span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section
+      class="ADPC-leading-6 ADPC-text-neutral-900"
+      id="section1"
+      style="border-spacing: 0px; list-style: outside"
+    >
+      <div class="ADPC-leading-6 ADPC-text-neutral-900" style="border-spacing: 0px; list-style: outside">
+        <div class="ADPC-leading-6 ADPC-text-neutral-900" style="border-spacing: 0px; list-style: outside">
+          <div class="ADPC-leading-6 ADPC-text-neutral-900" style="border-spacing: 0px; list-style: outside">
+            <div class="ADPC-leading-6 ADPC-text-neutral-900" style="border-spacing: 0px; list-style: outside">
+              <div
+                class="ADPC-leading-6 ADPC-text-left ADPC-text-stone-300"
+                src=""
+                data-image-width="1280"
+                data-image-height="906"
+                style="border-spacing: 0px; list-style: outside"
+              >
+                <div
+                  class="ADPC-leading-6 ADPC-text-left ADPC-text-stone-300"
+                  src="./photo-1.jpeg"
+                  style="border-spacing: 0px; list-style: outside"
+                >
+                  <p
+                    class="ADPC-font-sans ADPC-leading-6 ADPC-text-left ADPC-break-words ADPC-text-stone-300"
+                    style="border-spacing: 0px; list-style: outside"
+                  >
+                    Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis
+                    suscipit ultrices.
+                  </p>
+                  <h2
+                    class="ADPC-text-4xl ADPC-leading-10 ADPC-text-right ADPC-break-words ADPC-text-stone-300"
+                    style="border-spacing: 0px; font-family: Poppins; list-style: outside"
+                  >
+                    Welcome to the Multi-Framework Project
+                  </h2>
+                </div>
+              </div>
+              <div
+                class="ADPC-leading-6 ADPC-text-left ADPC-text-neutral-900"
+                style="border-spacing: 0px; list-style: outside"
+              >
+                <div
+                  class="ADPC-leading-6 ADPC-text-left ADPC-text-neutral-900"
+                  style="border-spacing: 0px; list-style: outside"
+                >
+                  <h2
+                    class="ADPC-text-4xl ADPC-leading-10 ADPC-text-left ADPC-break-words ADPC-text-neutral-900"
+                    style="border-spacing: 0px; font-family: Poppins; list-style: outside"
+                  >
+                    Explore our app built with Vue and React.
+                  </h2>
+                  <p
+                    class="ADPC-font-sans ADPC-leading-6 ADPC-text-left ADPC-break-words ADPC-text-neutral-900"
+                    style="border-spacing: 0px; list-style: outside"
+                  >
+                    Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis
+                    suscipit ultrices.
+                  </p>
+                  <a
+                    href="#section2"
+                    class="ADPC-font-bold ADPC-leading-6 ADPC-text-left ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+                    style="border-spacing: 0px; list-style: outside"
+                    >Explore Further</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="ADPC-leading-6 ADPC-text-neutral-900"
+      id="section2"
+      style="border-spacing: 0px; list-style: outside"
+    >
+      <div class="ADPC-leading-6 ADPC-text-neutral-900" style="border-spacing: 0px; list-style: outside">
+        <div
+          class="ADPC-leading-6 ADPC-text-left ADPC-text-neutral-900"
+          style="border-spacing: 0px; list-style: outside"
+        >
+          <div
+            class="ADPC-leading-6 ADPC-text-left ADPC-text-neutral-900"
+            style="border-spacing: 0px; list-style: outside"
+          >
+            <h1
+              class="ADPC-text-5xl ADPC-text-left ADPC-break-words ADPC-text-neutral-900"
+              style="border-spacing: 0px; font-family: Poppins; line-height: 52.8px; list-style: outside"
+            >
+              Transforming Brands with Digital Excellence
+            </h1>
+            <img
+              class="ADPC-leading-6 ADPC-text-left ADPC-text-neutral-900"
+              src="/photo-2.jpeg"
+              alt="Notebook Computer"
+              data-image-width="1280"
+              data-image-height="853"
+              style="border-spacing: 0px; list-style: outside"
+            />
+            <blockquote
+              class="ADPC-font-sans ADPC-italic ADPC-leading-6 ADPC-text-left ADPC-break-words ADPC-text-neutral-900"
+              style="border-spacing: 0px; list-style: outside"
+            >
+              Sample quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit
+              ultrices.
+            </blockquote>
+          </div>
+        </div>
+        <div
+          class="ADPC-leading-6 ADPC-text-left ADPC-text-neutral-900"
+          style="border-spacing: 0px; list-style: outside"
+        >
+          <div
+            class="ADPC-leading-6 ADPC-text-left ADPC-text-neutral-900"
+            style="border-spacing: 0px; list-style: outside"
+          >
+            <p
+              class="ADPC-font-sans ADPC-leading-6 ADPC-text-left ADPC-break-words ADPC-text-neutral-900"
+              style="border-spacing: 0px; list-style: outside"
+            >
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+              et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+            <a
+              href="mailto:hello@adpc-llc.com?subject=Reaching%20out%20regarding%20to%20...&amp;cc=andre.du.plessis%40adpc-llc.com"
+              class="ADPC-font-bold ADPC-leading-6 ADPC-text-left ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+              style="border-spacing: 0px; list-style: outside"
+              >Contact Us<br
+                class="ADPC-font-bold ADPC-leading-6 ADPC-text-left ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+                style="border-spacing: 0px; list-style: outside"
+              />
+            </a>
+            <img
+              class="ADPC-leading-6 ADPC-text-left ADPC-text-neutral-900"
+              src="/ADPCLogoLight.png"
+              alt="ADPC Projects Logo"
+              data-image-width="2690"
+              data-image-height="887"
+              style="border-spacing: 0px; list-style: outside"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
+  <footer
+    class="ADPC-leading-6 ADPC-text-center ADPC-text-stone-300"
+    id="sec-3882"
+    style="border-spacing: 0px; list-style: outside"
+  >
+    <div class="ADPC-leading-6 ADPC-text-center ADPC-text-stone-300" style="border-spacing: 0px; list-style: outside">
+      <img
+        class="ADPC-leading-6 ADPC-text-center ADPC-cursor-pointer ADPC-text-neutral-900"
+        src="./images/ADPCFavicon.png"
+        alt="ADPC Projects Icon"
+        title="Visit ADPC Projects"
+        data-image-width="1772"
+        data-image-height="1772"
+        data-href="https://adpc-llc.com"
+        data-target="_blank"
+        style="border-spacing: 0px; list-style: outside"
+      />
+      <div
+        class="ADPC-leading-6 ADPC-text-center ADPC-whitespace-nowrap ADPC-text-stone-300"
+        style="border-spacing: 0px; list-style: outside"
+      >
+        <a
+          class="ADPC-leading-6 ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+          data-type="GitHub"
+          title="GitHub"
+          target="_blank"
+          href="https://github.com/Andre-ADPC"
+          style="border-spacing: 0px; list-style: outside"
+        >
+          <span
+            class="ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+            style="border-spacing: 0px; line-height: 0px; list-style: outside"
+          >
+            <img
+              src="./images/github-white.png"
+              alt="GitHub Icon"
+              class="ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+              style="border-spacing: 0px; line-height: 0px; list-style: outside"
+            />
+          </span>
+        </a>
+        <a
+          class="ADPC-leading-6 ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+          data-type="LinkedIn"
+          title="LinkedIn"
+          target="_blank"
+          href="https://www.linkedin.com/in/andre-du-plessis-992a0329"
+          style="border-spacing: 0px; list-style: outside"
+        >
+          <span
+            class="ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+            style="border-spacing: 0px; line-height: 0px; list-style: outside"
+          >
+            <img
+              src="./images/linkedin-white.png"
+              alt="LinkedIn Icon"
+              class="ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+              style="border-spacing: 0px; line-height: 0px; list-style: outside"
+            />
+          </span>
+        </a>
+        <a
+          class="ADPC-leading-6 ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+          data-type="Stackoverflow"
+          title="Stackoverflow"
+          target="_blank"
+          href="https://stackoverflow.com/users/19977074/andre?tab=profile"
+          style="border-spacing: 0px; list-style: outside"
+        >
+          <span
+            class="ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+            style="border-spacing: 0px; line-height: 0px; list-style: outside"
+          >
+            <img
+              src="./images/stackoverflow-white.png"
+              alt="Stackoverflow Icon"
+              class="ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+              style="border-spacing: 0px; line-height: 0px; list-style: outside"
+            />
+          </span>
+        </a>
+        <a
+          class="ADPC-leading-6 ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+          target="_blank"
+          data-type="Facebook"
+          title="Facebook"
+          href="https://www.facebook.com/RedDragonX5"
+          style="border-spacing: 0px; list-style: outside"
+        >
+          <span
+            class="ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+            style="border-spacing: 0px; line-height: 0px; list-style: outside"
+          >
+            <img
+              src="./images/facebook-white.png"
+              alt="Facebook Icon"
+              class="ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+              style="border-spacing: 0px; line-height: 0px; list-style: outside"
+            />
+          </span>
+        </a>
+        <a
+          class="ADPC-leading-6 ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+          target="_blank"
+          data-type="X"
+          title="X"
+          href="https://x.com/AndreDuP_ADPC"
+          style="border-spacing: 0px; list-style: outside"
+        >
+          <span
+            class="ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+            style="border-spacing: 0px; line-height: 0px; list-style: outside"
+          >
+            <img
+              src="./images/X-white.png"
+              alt="X Icon"
+              class="ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+              style="border-spacing: 0px; line-height: 0px; list-style: outside"
+            />
+          </span>
+        </a>
+        <a
+          class="ADPC-leading-6 ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+          target="_blank"
+          data-type="Dev"
+          title="DEV"
+          href="https://dev.to/andre57"
+          style="border-spacing: 0px; list-style: outside"
+        >
+          <span
+            class="ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+            style="border-spacing: 0px; line-height: 0px; list-style: outside"
+          >
+            <img
+              src="./images/dev-white.png"
+              alt="DEV Icon"
+              class="ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+              style="border-spacing: 0px; line-height: 0px; list-style: outside"
+            />
+          </span>
+        </a>
+        <a
+          class="ADPC-leading-6 ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+          target="_blank"
+          data-type="Substack"
+          title="Substack"
+          href="https://andreduplessis.substack.com/"
+          style="border-spacing: 0px; list-style: outside"
+        >
+          <span
+            class="ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+            style="border-spacing: 0px; line-height: 0px; list-style: outside"
+          >
+            <img
+              src="./images/substack-white.png"
+              alt="Substack Icon"
+              class="ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+              style="border-spacing: 0px; line-height: 0px; list-style: outside"
+            />
+          </span>
+        </a>
+        <a
+          class="ADPC-leading-6 ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+          target="_blank"
+          data-type="Bluesky"
+          title="Bluesky"
+          href="https://bsky.app/profile/andre-dup.bsky.social"
+          style="border-spacing: 0px; list-style: outside"
+        >
+          <span
+            class="ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+            style="border-spacing: 0px; line-height: 0px; list-style: outside"
+          >
+            <img
+              src="./images/bluesky-white.png"
+              alt="Bluesky Icon"
+              class="ADPC-text-center ADPC-whitespace-nowrap ADPC-cursor-pointer ADPC-text-stone-300"
+              style="border-spacing: 0px; line-height: 0px; list-style: outside"
+            />
+          </span>
+        </a>
+      </div>
+      <p
+        class="ADPC-font-sans ADPC-text-sm ADPC-leading-6 ADPC-text-center ADPC-break-words ADPC-text-stone-300"
+        style="border-spacing: 0px; list-style: outside"
+      >
+        © Copyright ADPC Projects (IE) 2023 - 2024.
+      </p>
+    </div>
+  </footer>
+  <span
+    style="
+      height: 64px;
+      width: 64px;
+      margin-left: 0px;
+      margin-right: auto;
+      margin-top: 0px;
+      background-image: none;
+      right: 20px;
+      bottom: 20px;
+      padding: 15px;
+      display: block;
+      border-spacing: 0px;
+      line-height: 0px;
+      list-style: outside;
+    "
+    class="ADPC-block ADPC-p-4 ADPC-mt-0 ADPC-mr-auto ADPC-ml-0 ADPC-w-16 ADPC-h-16 ADPC-bg-none ADPC-cursor-pointer ADPC-text-neutral-900"
+    data-href="#"
+  >
+    <img
+      src="images/up-arrow.png"
+      alt="Up-Arrow Icon"
+      class="ADPC-cursor-pointer ADPC-text-neutral-900"
+      style="border-spacing: 0px; line-height: 0px; list-style: outside"
+    />
+  </span>
 </html>
