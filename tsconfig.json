@@ -2,13 +2,21 @@
   "files": [],
   "references": [
     {
-      "path": "./tsconfig.node.json"
+      "path": "./tsconfig.app.json"
     },
     {
-      "path": "./tsconfig.app.json"
+      "path": "./tsconfig.node.json"
     },
     {
       "path": "./tsconfig.vitest.json"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["Frontend/Vue/src/*"],
+      "@landing/*": ["LandingPage/scripts/*"]
+    }
+  },
+  "include": ["./LandingPage/**/*", "./Frontend/Vue/**/*", "./Frontend/React/**/*"]
 }
