@@ -3,9 +3,11 @@ import tailwindcssOpentype from 'tailwindcss-opentype'
 
 const config: Config = {
   content: [
-    './index.html', // Include the entry HTML
-    './src/**/*.{vue,js,ts,jsx,tsx}', // Include all Vue and TypeScript files
-    './components/**/*.{vue,js,ts}', // Include components
+    // Include the Project entry HTML
+    './LandingPage/**/*.{html,js,ts,jsx,tsx}',
+    // Include all Vue, React and TypeScript files
+    './Frontend/**/*.{vue,react,html,js,ts,jsx,tsx}',
+    //'./components/**/*.{vue,js,ts}', // Include components
   ],
   theme: {
     extend: {
