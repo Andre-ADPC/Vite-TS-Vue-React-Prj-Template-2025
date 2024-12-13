@@ -1,20 +1,27 @@
 import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [vue(), vueJsx(), vueDevTools()],
-  root: './Frontend/Vue/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./Frontend/Vue/src', import.meta.url)),
+      '@shared': fileURLToPath(new URL('./Shared', import.meta.url)),
     },
   },
   build: {
-    outDir: 'dist',
+    // Multi-page setup: handle Landing Page and Vue app
+    rollupOptions: {
+      input: {
+        landing: fileURLToPath(new URL('./LandingPage/index.html', import.meta.url)),
+        vue: fileURLToPath(new URL('./Frontend/Vue/index.html', import.meta.url)),
+      },
+      output: {
+        dir: 'dist',
+      },
+    },
   },
 })
