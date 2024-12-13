@@ -9,8 +9,10 @@
     "vite.config.ts"
   ],
   "compilerOptions": {
-    "composite": true,
-    "noEmit": true,
+    "composite": true, // Required for project references
+    "declaration": true, // Ensures type declarations are emitted
+    "noEmit": false, // Enables emitting of compiled JavaScript files
+    "outDir": "./dist", // Ensures compiled files are output to a valid directory
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
 
     "module": "ESNext",
