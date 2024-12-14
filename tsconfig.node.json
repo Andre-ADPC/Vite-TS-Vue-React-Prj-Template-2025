@@ -1,12 +1,16 @@
 {
-  "extends": "@tsconfig/node22/tsconfig.json",
+  "extends": "./tsconfig.json",
   "include": [
     "vite.config.*",
     "vitest.config.*",
     "cypress.config.*",
     "nightwatch.conf.*",
     "playwright.config.*",
-    "vite.config.ts"
+    "vite.config.ts",
+    "../LandingPage/**/*",
+    "../Frontend/React/**/*",
+    "../Frontend/Vue/**/*",
+    "../Shared/**/*"
   ],
   "compilerOptions": {
     "composite": true, // Required for project references
@@ -17,6 +21,6 @@
 
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "types": ["node"]
+    "types": ["node", "vite/client"]
   }
 }
