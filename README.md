@@ -1,6 +1,8 @@
 # A Cross-Framework Vite-TS-Vue-React Project Template-2025
 
-It is an experiment to see how tricky and convoluted things might or might not get when you build the exact same App with two JS frameworks at the same time, in the same Repo and then compare their performance, quirks, pains and gains alongside each other on the same hardware, using the same complimentary assets.
+<img src="./public/images/FrameworkBlurr-Logo-1.png" alt="Project Logo" title="Project Logo" width="400" style="box-shadow: 5px 5px 10px \#f6f6f6;">
+
+Is an experiment to see how tricky and convoluted things might or might not get when you build the exact same App with two JS frameworks at the same time, in the same Repo and then compare their performance, quirks, pains and gains alongside each other on the same hardware, using the same complimentary assets.
 
 It is a continued WIP, growing into the shape I'm looking to achieve every week.
 
@@ -44,7 +46,7 @@ The Jenkins pipeline is a multi-branch type and is getting structured to accommo
 
 ## General Project Setup
 
-**NOTE**: The commands here are varied and growing, the final versions will be added here once they have been tested and gotten to work as expected. For more detail on the current **NPM Scripts** available to run, refer to the `"scripts": {...},` section in the `package.json` file.
+**NOTE**: The commands here are varied and growing, the final versions will be added here once they have been tested and gotten to work as expected. For more detail on the current **NPM Scripts** available to run, refer to the `"scripts": {...},` section in the [`package.json`](./package.json) file.
 
 ### Installing Packages from `package.json`
 
