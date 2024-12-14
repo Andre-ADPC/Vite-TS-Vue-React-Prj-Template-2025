@@ -1,15 +1,22 @@
-import { createReactRouter, createRouteConfig } from '@tanstack/react-router';
+import { createRouter, Route } from '@tanstack/react-router';
+import { Root } from 'postcss';
 import React from 'react';
 
-const rootRoute = createRouteConfig({
+// Root route
+const rootRoute = new Route({
+    getParentRoute: () => undefined,
+    path: '/',
     component: () => <div>Root Layout</div>,
 });
 
-const homeRoute = rootRoute.createRoute({
-    path: '/',
+// Home route
+const homeRoute = new Route({
+    getParentRoute: () => rootRoute,
+    path: '/home',
     component: () => <div>Home Page</div>,
 });
 
-const routes = rootRoute.addChildren([homeRoute]);
-
-export const router = createReactRouter({ routeConfig: routes });
+// Create router
+export const router = createRouter({
+    routeTree: rootRoute.addChildren([homeRoute]),
+});
