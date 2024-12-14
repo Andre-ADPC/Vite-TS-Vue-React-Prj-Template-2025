@@ -32,15 +32,29 @@
     "clean": "npx rimraf dist"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.62.7",
+    "@tanstack/react-router": "^1.89.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "i18next": "^24.1.0",
     "pinia": "^2.2.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-i18next": "^15.2.0",
     "tailwindcss-opentype": "^1.1.0",
     "vue": "^3.5.12",
-    "vue-router": "^4.4.5"
+    "vue-i18n": "^9.2.0",
+    "vue-router": "^4.4.5",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
+    "@intlify/vue-i18n-bridge": "^1.1.0",
+    "@intlify/vue-i18n-loader": "^4.2.0",
     "@tsconfig/node22": "^22.0.0",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^22.9.0",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "@types/react-i18next": "^7.8.3",
     "@typescript-eslint/eslint-plugin": "^8.17.0",
     "@typescript-eslint/parser": "^8.17.0",
     "@vitejs/plugin-vue": "^5.2.1",
