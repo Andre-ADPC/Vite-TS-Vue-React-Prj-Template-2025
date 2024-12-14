@@ -16,11 +16,11 @@ export default defineConfig({
     // Multi-page setup: handle Landing Page and Vue app
     rollupOptions: {
       input: {
-        landing: fileURLToPath(new URL('./LandingPage/index.html', import.meta.url)),
+        main: fileURLToPath(new URL('./index.html', import.meta.url)),
         vue: fileURLToPath(new URL('./Frontend/Vue/index.html', import.meta.url)),
       },
       output: {
-        dir: 'dist',
+        dir: './dist',
       },
     },
   },
