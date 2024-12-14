@@ -15,8 +15,24 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["Frontend/Vue/src/*"],
-      "@landing/*": ["LandingPage/scripts/*"]
-    }
+      "@landing/*": ["LandingPage/scripts/*"],
+      "@shared/*": ["Shared/*"],
+      "@vue/*": ["Frontend/Vue/*"],
+      "@react/*": ["Frontend/React/*"]
+    },
+    "esModuleInterop": true, // Enable compatibility for React imports
+    "allowSyntheticDefaultImports": true, // Support synthetic default imports
+    "jsx": "react-jsx", // Required for React JSX
+    "strict": true, // Enforce strict type-checking for better code quality
+    "moduleResolution": "Node", // Resolve modules like Vite does
+    "module": "ESNext", // Match Vite's module system
+    "target": "ESNext", // Optimize for modern JavaScript environments
+    "skipLibCheck": true, // Skip checking library files for performance
+    "forceConsistentCasingInFileNames": true, // Enforce consistent file naming
+    "resolveJsonModule": true, // Allow importing JSON files
+    "isolatedModules": true, // Required for React and modern TypeScript setups
+    "noEmit": true // Ensure no files are emitted during the build
   },
-  "include": ["./LandingPage/**/*", "./Frontend/Vue/**/*", "./Frontend/React/**/*"]
+  "include": ["./LandingPage/**/*", "./Frontend/Vue/**/*", "./Frontend/React/**/*", "./Shared/**/*"],
+  "exclude": ["node_modules"]
 }
