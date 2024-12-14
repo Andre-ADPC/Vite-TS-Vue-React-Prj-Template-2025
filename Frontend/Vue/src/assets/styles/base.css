@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Our Unique Branded Class-base Color Palette - Helps us keep track between --tw classes and our own setup */
+
+/* Semantic Colour Variables for This Project */
+:root {
+  --color-text: var(--adpc-c-text-light-1, #2c3e50); /* Fallback for safety */
+  --color-heading: var(--adpc-c-text-light-1, #2c3e50);
+  --color-background: var(--adpc-c-white, #ffffff);
+
+  --color-primary: hsla(160, 100%, 37%, 1); /* Button/CTA */
+  --color-primary-hover: hsla(160, 100%, 45%, 1);
+  --color-primary-muted: hsla(160, 50%, 75%, 1);
+
+  --section-gap: 160px;
+}
+
+/* Optional Semantic Colour Variables for This Project */
+/*
+:root {
+  --color-background: var(--adpc-c-white);
+  --color-background-soft: var(--adpc-c-white-soft);
+  --color-background-mute: var(--adpc-c-white-mute);
+
+  --color-border: var(--adpc-c-divider-light-2);
+  --color-border-hover: var(--adpc-c-divider-light-1);
+
+  --color-heading: var(--adpc-c-text-light-1);
+  --color-text: var(--adpc-c-text-light-1);
+
+  --section-gap: 160px;
+}
+  */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: var(--adpc-c-text-dark-1, #f2f2f2);
+    --color-heading: var(--adpc-c-text-dark-1, #f2f2f2);
+    --color-background: var(--adpc-c-black, #181818);
+
+    --color-primary: hsla(160, 100%, 45%, 1); /* Brighter for dark mode */
+    --color-primary-hover: hsla(160, 100%, 55%, 1);
+    --color-primary-muted: hsla(160, 50%, 85%, 1);
+  }
+}
+
+.btn {
+  @apply inline-block px-4 py-2 rounded-lg text-white transition-colors;
+  background-color: var(--color-primary);
+}
+
+.btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.card {
+  @apply p-4 shadow-lg rounded-lg transition-transform;
+  background-color: var(--color-background);
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  /*color: var(--color-text);*/
+  font-size: 16px;
+  line-height: 1.8; /* Enhance text legibility */
+  background-color: var(--color-background);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
