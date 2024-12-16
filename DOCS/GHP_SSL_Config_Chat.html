@@ -1,0 +1,1227 @@
+<!doctype html>
+<html lang="en-GB">
+  <body>
+    <div>
+      <details
+        data-action="toggle:virtual-agent-container#start"
+        data-target="virtual-agent-container.agent-option"
+        class="details-reset details-dialog-close details-overlay details-overlay-dark anim-fade-in fast mb-1 rounded-2 fgColor-default"
+        id="virtual-agent-container-start"
+        open=""
+      >
+        <summary
+          aria-label="Start Virtual Agent"
+          class="mb-1 rounded-2 hide-before-background btn btn-primary border-bottom borderColor-default py-3 px-4"
+          role="button"
+        >
+          <div
+            data-event-click="eyJ0eXBlIjoicmVmZXJyYWxfY2xpY2siLCJjYXRlZ29yeSI6IklOVEVSTkFMX0hFTFAiLCJzb3VyY2UiOiJJTlRFUk5BTCIsInBhdGgiOm51bGwsInRhcmdldCI6Ik9wZW4gVkEiLCJkb2NzX3RvcGljcyI6bnVsbCwic2VhcmNoX3F1ZXJ5IjpudWxsfQ=="
+            data-event-hmac="6747fbf628f2943e9de41071b46c13ed318047e079318c09bd4c42503b61cb87"
+          >
+            <div class="virtual-assistant d-flex flex-items-center">
+              <svg
+                aria-hidden="true"
+                height="16"
+                viewBox="0 0 16 16"
+                version="1.1"
+                width="16"
+                data-view-component="true"
+                class="octicon octicon-hubot fgColor-onEmphasis v-align-middle"
+              >
+                <path
+                  d="M0 8a8 8 0 0 1 16 0v5.25a.75.75 0 0 1-1.5 0V8a6.5 6.5 0 1 0-13 0v5.25a.75.75 0 0 1-1.5 0Zm3-1.25C3 5.784 3.784 5 4.75 5h6.5c.966 0 1.75.784 1.75 1.75v1.5A1.75 1.75 0 0 1 11.25 10h-6.5A1.75 1.75 0 0 1 3 8.25Zm1.47-.53a.75.75 0 0 0 0 1.06l1.5 1.5a.75.75 0 0 0 1.06 0L8 7.81l.97.97a.75.75 0 0 0 1.06 0l1.5-1.5a.749.749 0 0 0-.326-1.275.749.749 0 0 0-.734.215l-.97.97-.97-.97a.75.75 0 0 0-1.06 0l-.97.97-.97-.97a.75.75 0 0 0-1.06 0Zm1.03 6.03a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1-.75-.75Z"
+                ></path>
+              </svg>
+              <span class="ml-1 text-underline">
+                <strong data-target="virtual-agent-container.flow-prompt">Troubleshoot Pages SSL issues</strong> with
+                our Virtual Agent
+              </span>
+            </div>
+          </div>
+        </summary>
+        <details-dialog
+          class="details-dialog anim-fade-in fast col-sm-10 col-md-8 col-lg-6 width-full rounded-2"
+          aria-label="Virtual Assistant"
+          role="dialog"
+          aria-modal="true"
+          tabindex="-1"
+        >
+          <div class="Box d-flex flex-column height-full">
+            <div class="Box-header d-flex flex-justify-between flex-items-center">
+              <h3 class="Box-title">Virtual Assistant</h3>
+              <button
+                data-close-dialog=""
+                id="icon-button-28b0cc45-b5f2-4c58-8262-106cac764030"
+                aria-labelledby="tooltip-9c5cc796-8c3e-4d7a-8dea-533f4b3e72ba"
+                type="button"
+                data-view-component="true"
+                class="Button Button--iconOnly Button--secondary Button--medium"
+              >
+                <svg
+                  aria-hidden="true"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  version="1.1"
+                  width="16"
+                  data-view-component="true"
+                  class="octicon octicon-x Button-visual"
+                >
+                  <path
+                    d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+                  ></path>
+                </svg></button
+              ><tool-tip
+                id="tooltip-9c5cc796-8c3e-4d7a-8dea-533f4b3e72ba"
+                for="icon-button-28b0cc45-b5f2-4c58-8262-106cac764030"
+                popover="manual"
+                data-direction="s"
+                data-type="label"
+                data-view-component="true"
+                class="sr-only position-absolute"
+                aria-hidden="true"
+                role="tooltip"
+                >Close dialog</tool-tip
+              >
+            </div>
+            <div class="overflow-hidden d-flex flex-column flex-1 height-full">
+              <virtual-agent
+                class="d-flex height-full"
+                data-action="updateuistate:virtual-agent-container#manageUI"
+                data-target="virtual-agent-container.virtual-agent"
+                data-event-click="eyJ0eXBlIjoidmlydHVhbF9hZ2VudF9jb25uZWN0aW9uX2Vycm9yIn0="
+                data-event-hmac="7726b66d11bc32531f704bff9c8b8dbb50500ae7ddb093c0d7061629afc4fac8"
+                agent-avatar="https://avatars1.githubusercontent.com/u/480938"
+                user-avatar="https://avatars.githubusercontent.com/u/86864273?size=40"
+                data-catalyst=""
+              >
+                <section class="d-flex flex-column flex-1 width-fit">
+                  <div
+                    data-target="virtual-agent.connectionErrorMessage"
+                    hidden=""
+                    data-view-component="true"
+                    class="flash flash-error m-3"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      version="1.1"
+                      width="16"
+                      data-view-component="true"
+                      class="octicon octicon-alert"
+                    >
+                      <path
+                        d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+                      ></path></svg
+                    >Sorry, a connection error occurred.
+                  </div>
+                  <section
+                    id="messages"
+                    class="flex-auto d-flex flex-column overflow-y-scroll px-1 pb-1"
+                    data-target="virtual-agent.messagesContainer"
+                  >
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>Hi, @Andre-ADPC.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>Are you having troubles with HTTPS on your GitHub Pages site using a custom domain?</p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section data-target="virtual-agent-message.choicesContainer" class="mx-auto text-center">
+                        <virtual-agent-message-choice
+                          data-targets="virtual-agent-message.messageChoices"
+                          data-action="disableChoices:virtual-agent-message#disableChoices"
+                          class="mt-2 mb-3 d-inline-block"
+                          data-catalyst=""
+                        >
+                          <button
+                            class="btn choice mx-2"
+                            type="button"
+                            data-action="click:virtual-agent-message-choice#choose"
+                            data-target="virtual-agent-message-choice.button"
+                            value="Yes"
+                            disabled=""
+                          >
+                            Yes
+                          </button>
+                        </virtual-agent-message-choice>
+
+                        <virtual-agent-message-choice
+                          data-targets="virtual-agent-message.messageChoices"
+                          data-action="disableChoices:virtual-agent-message#disableChoices"
+                          class="mt-2 mb-3 d-inline-block"
+                          data-catalyst=""
+                        >
+                          <button
+                            class="btn choice mx-2"
+                            type="button"
+                            data-action="click:virtual-agent-message-choice#choose"
+                            data-target="virtual-agent-message-choice.button"
+                            value="No"
+                            disabled=""
+                          >
+                            No
+                          </button>
+                        </virtual-agent-message-choice>
+                      </section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container" class="float-right">
+                        <div class="my-2">
+                          <div
+                            class="d-inline-flex float-items-start flex-row-reverse"
+                            data-target="virtual-agent-message.content"
+                          >
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars.githubusercontent.com/u/86864273?size=40"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word --bgColor-success-emphasis"
+                              data-target="virtual-agent-message.message"
+                            >
+                              Yes
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>What domain are you facing problems with?</p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container" class="float-right">
+                        <div class="my-2">
+                          <div
+                            class="d-inline-flex float-items-start flex-row-reverse"
+                            data-target="virtual-agent-message.content"
+                          >
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars.githubusercontent.com/u/86864273?size=40"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word --bgColor-success-emphasis"
+                              data-target="virtual-agent-message.message"
+                            >
+                              frameworkblurr.adpc-llc.com
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>Running domain check on <code>frameworkblurr.adpc-llc.com</code>, please wait...</p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>
+                                I found these specific SSL issues:<br />
+                                <!-- raw HTML omitted --><br />
+                                We encountered the following errors attempting to issue a certificate:
+                              </p>
+                              <ol>
+                                <li>
+                                  There is an IP(s) that doesn't belong to GitHub configured against this domain, please
+                                  check the DNS records.
+                                </li>
+                                <li>There is an AAAA record present for this domain, please remove this.</li>
+                              </ol>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>Can we help you with troubleshooting SSL errors?</p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section data-target="virtual-agent-message.choicesContainer" class="mx-auto text-center">
+                        <virtual-agent-message-select
+                          data-target="virtual-agent-message.messageSelect"
+                          data-catalyst=""
+                        >
+                          <select
+                            virtual-agent-element=""
+                            class="form-select"
+                            data-target="virtual-agent-message-select.select"
+                            data-action="change:virtual-agent-message-select#choose"
+                            aria-label="Choose Help topic"
+                            disabled=""
+                          >
+                            <option disabled="" selected="">Please select a choice</option>
+                            <option value="Serving content errors">Serving content errors</option>
+                            <option value="Configuring a Cloudflare domain">Configuring a Cloudflare domain</option>
+                            <option value="Setting CAA">Setting CAA</option>
+                            <option value="Issues with www domain and CNAME">Issues with www domain and CNAME</option>
+                            <option value="No thanks">No thanks</option>
+                          </select>
+                        </virtual-agent-message-select>
+                      </section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container" class="float-right">
+                        <div class="my-2">
+                          <div
+                            class="d-inline-flex float-items-start flex-row-reverse"
+                            data-target="virtual-agent-message.content"
+                          >
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars.githubusercontent.com/u/86864273?size=40"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word --bgColor-success-emphasis"
+                              data-target="virtual-agent-message.message"
+                            >
+                              Configuring a Cloudflare domain
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>
+                                Cloudflare enables their HTTP/DNS proxy feature by default, meaning GitHub isn't able to
+                                see the DNS records required to generate an HTTPS certificate. You'll need to disable
+                                this for any DNS records that point towards GitHub.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>
+                                <strong>Disclaimer</strong> Disabling the HTTP/DNS proxy may interfere with other
+                                Cloudflare services.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>
+                                If you use other Cloudflare services with your site, we aren't able to guarantee that
+                                these will continue working. For more help with this, I'd recommend reaching out to
+                                Cloudflare's support team.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>Would you like to see the instructions?</p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section data-target="virtual-agent-message.choicesContainer" class="mx-auto text-center">
+                        <virtual-agent-message-choice
+                          data-targets="virtual-agent-message.messageChoices"
+                          data-action="disableChoices:virtual-agent-message#disableChoices"
+                          class="mt-2 mb-3 d-inline-block"
+                          data-catalyst=""
+                        >
+                          <button
+                            class="btn choice mx-2"
+                            type="button"
+                            data-action="click:virtual-agent-message-choice#choose"
+                            data-target="virtual-agent-message-choice.button"
+                            value="Yes"
+                            disabled=""
+                          >
+                            Yes
+                          </button>
+                        </virtual-agent-message-choice>
+
+                        <virtual-agent-message-choice
+                          data-targets="virtual-agent-message.messageChoices"
+                          data-action="disableChoices:virtual-agent-message#disableChoices"
+                          class="mt-2 mb-3 d-inline-block"
+                          data-catalyst=""
+                        >
+                          <button
+                            class="btn choice mx-2"
+                            type="button"
+                            data-action="click:virtual-agent-message-choice#choose"
+                            data-target="virtual-agent-message-choice.button"
+                            value="No"
+                            disabled=""
+                          >
+                            No
+                          </button>
+                        </virtual-agent-message-choice>
+                      </section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container" class="float-right">
+                        <div class="my-2">
+                          <div
+                            class="d-inline-flex float-items-start flex-row-reverse"
+                            data-target="virtual-agent-message.content"
+                          >
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars.githubusercontent.com/u/86864273?size=40"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word --bgColor-success-emphasis"
+                              data-target="virtual-agent-message.message"
+                            >
+                              Yes
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>
+                                First of all, make sure you've set up your DNS records in Cloudflare according to the
+                                instructions in our
+                                <a
+                                  href="https://docs.github.com/free-pro-team@latest/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site"
+                                  target="_blank"
+                                  >help documentation</a
+                                >
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>
+                                To disable CloudFlare's DNS/HTTP proxy, you'll need to log in to your Cloudflare
+                                account, navigate to the DNS settings page for your domain, and click on the orange
+                                cloud icon next to any DNS records related to your GitHub Pages domain.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>The cloud icon should turn grey when it's correctly disabled.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>
+                                It can take up to 72 hours for these DNS changes to propagate. Once completed you'll
+                                need to trigger a recheck of your DNS setup by visiting your repository's settings page.
+                                This will kick off the process of provisioning an HTTPS certificate for your domain
+                                name.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>
+                                Once your certificate has been provisioned, you'll then be able to enforce HTTPS by
+                                checking the "Enforce HTTPS" checkbox. Keep in mind that it can take an hour or so for
+                                an HTTPS certificate to be requested, so if you follow these steps but are still having
+                                trouble, that's usually why.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>
+                                If you're not sure how to resolve these SSL errors, contact your DNS provider, or have a
+                                look at
+                                <a
+                                  href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/troubleshooting-custom-domains-and-github-pages"
+                                  target="_blank"
+                                  >our custom domain troubleshooting guide</a
+                                >.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>
+                                If you're still having trouble, please open a ticket and include as many details about
+                                the problem as you can.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>Thank you for using Virtual Assistant.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section
+                        data-target="virtual-agent-message.choicesContainer"
+                        class="mx-auto text-center"
+                      ></section>
+                    </virtual-agent-message>
+
+                    <virtual-agent-message
+                      data-targets="virtual-agent.messages"
+                      class="anim-fade-in fast"
+                      data-catalyst=""
+                    >
+                      <section data-target="virtual-agent-message.container">
+                        <div class="my-2">
+                          <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                            <img
+                              class="avatar rounded-1 avatar-user mx-2"
+                              height="40"
+                              width="40"
+                              data-target="virtual-agent-message.avatar"
+                              alt="Virtual Assistant avatar"
+                              src="https://avatars1.githubusercontent.com/u/480938"
+                            />
+                            <div
+                              class="border px-2 py-2 rounded-2 message break-word bgColor-muted"
+                              data-target="virtual-agent-message.message"
+                            >
+                              <p>Did this help you?</p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section data-target="virtual-agent-message.choicesContainer" class="mx-auto text-center">
+                        <virtual-agent-message-choice
+                          data-targets="virtual-agent-message.messageChoices"
+                          data-action="disableChoices:virtual-agent-message#disableChoices"
+                          class="mt-2 mb-3 d-inline-block"
+                          data-catalyst=""
+                        >
+                          <button
+                            class="btn choice mx-2"
+                            type="button"
+                            data-action="click:virtual-agent-message-choice#choose"
+                            data-target="virtual-agent-message-choice.button"
+                            value="Yes"
+                          >
+                            Yes
+                          </button>
+                        </virtual-agent-message-choice>
+
+                        <virtual-agent-message-choice
+                          data-targets="virtual-agent-message.messageChoices"
+                          data-action="disableChoices:virtual-agent-message#disableChoices"
+                          class="mt-2 mb-3 d-inline-block"
+                          data-catalyst=""
+                        >
+                          <button
+                            class="btn choice mx-2"
+                            type="button"
+                            data-action="click:virtual-agent-message-choice#choose"
+                            data-target="virtual-agent-message-choice.button"
+                            value="No"
+                          >
+                            No
+                          </button>
+                        </virtual-agent-message-choice>
+                      </section>
+                    </virtual-agent-message>
+                  </section>
+                  <section
+                    data-target="virtual-agent.waiting"
+                    class="d-flex flex-auto flex-justify-center pb-2"
+                    hidden=""
+                  >
+                    <span data-view-component="true">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        aria-hidden="true"
+                        data-view-component="true"
+                        class="v-align-middle anim-rotate"
+                      >
+                        <circle
+                          cx="8"
+                          cy="8"
+                          r="7"
+                          stroke="currentColor"
+                          stroke-opacity="0.25"
+                          stroke-width="2"
+                          vector-effect="non-scaling-stroke"
+                          fill="none"
+                        ></circle>
+                        <path
+                          d="M15 8a7.002 7.002 0 00-7-7"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          vector-effect="non-scaling-stroke"
+                        ></path>
+                      </svg>
+                      <span class="sr-only">Loading</span>
+                    </span>
+                  </section>
+                  <section id="input" class="d-flex px-3 pt-3 pb-2 border-top">
+                    <input
+                      virtual-agent-element=""
+                      type="text"
+                      class="form-control input-block mr-2"
+                      data-action="keydown:virtual-agent#sendMessageEnter"
+                      data-target="virtual-agent.input"
+                      maxlength="500"
+                      autocomplete="off"
+                      aria-label="Chat with the virtual assistant"
+                      disabled=""
+                    />
+                    <button
+                      class="btn send-button"
+                      type="button"
+                      aria-label="send"
+                      data-action="click:virtual-agent#sendMessageClick"
+                      data-target="virtual-agent.sendButton"
+                      disabled=""
+                    >
+                      <svg
+                        aria-hidden="true"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        version="1.1"
+                        width="16"
+                        data-view-component="true"
+                        class="octicon octicon-paper-airplane"
+                      >
+                        <path
+                          d="M.989 8 .064 2.68a1.342 1.342 0 0 1 1.85-1.462l13.402 5.744a1.13 1.13 0 0 1 0 2.076L1.913 14.782a1.343 1.343 0 0 1-1.85-1.463L.99 8Zm.603-5.288L2.38 7.25h4.87a.75.75 0 0 1 0 1.5H2.38l-.788 4.538L13.929 8Z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </section>
+                </section>
+                <template data-target="virtual-agent.messageTemplate">
+                  <virtual-agent-message data-targets="virtual-agent.messages" class="anim-fade-in fast">
+                    <section data-target="virtual-agent-message.container">
+                      <div class="my-2">
+                        <div class="d-inline-flex float-items-start" data-target="virtual-agent-message.content">
+                          <img
+                            class="avatar rounded-1 avatar-user mx-2"
+                            height="40"
+                            width="40"
+                            data-target="virtual-agent-message.avatar"
+                            alt="Virtual Assistant avatar"
+                          />
+                          <div
+                            class="border px-2 py-2 rounded-2 message break-word"
+                            data-target="virtual-agent-message.message"
+                          ></div>
+                        </div>
+                      </div>
+                    </section>
+                    <section data-target="virtual-agent-message.choicesContainer" class="mx-auto text-center"></section>
+                  </virtual-agent-message>
+                </template>
+                <template data-target="virtual-agent.messageChoiceTemplate">
+                  <virtual-agent-message-choice
+                    data-targets="virtual-agent-message.messageChoices"
+                    data-action="disableChoices:virtual-agent-message#disableChoices"
+                    class="mt-2 mb-3 d-inline-block"
+                  >
+                    <button
+                      class="btn choice mx-2"
+                      type="button"
+                      data-action="click:virtual-agent-message-choice#choose"
+                      data-target="virtual-agent-message-choice.button"
+                    ></button>
+                  </virtual-agent-message-choice>
+                </template>
+                <template data-target="virtual-agent.messageSelectTemplate">
+                  <virtual-agent-message-select data-target="virtual-agent-message.messageSelect">
+                    <select
+                      virtual-agent-element=""
+                      class="form-select"
+                      data-target="virtual-agent-message-select.select"
+                      data-action="change:virtual-agent-message-select#choose"
+                      aria-label="Choose Help topic"
+                    >
+                      <option disabled="" selected="">Please select a choice</option>
+                    </select>
+                  </virtual-agent-message-select>
+                </template>
+              </virtual-agent>
+            </div>
+            <div class="p-3 d-flex flex-column flex-sm-row flex-justify-end">
+              <button
+                id="start-over"
+                data-target="virtual-agent-container.start-over"
+                data-action="click:virtual-agent-container#restart"
+                type="button"
+                data-view-component="true"
+                class="Button--primary Button--small Button m-1"
+                aria-describedby="tooltip-94fdefce-6c55-4405-9adb-927e444835dd"
+                disabled=""
+              >
+                <span class="Button-content">
+                  <span class="Button-visual Button-leadingVisual">
+                    <svg
+                      aria-hidden="true"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      version="1.1"
+                      width="16"
+                      data-view-component="true"
+                      class="octicon octicon-sync"
+                    >
+                      <path
+                        d="M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span class="Button-label">Start over</span>
+                </span></button
+              ><tool-tip
+                id="tooltip-94fdefce-6c55-4405-9adb-927e444835dd"
+                for="start-over"
+                popover="manual"
+                data-direction="s"
+                data-type="description"
+                data-view-component="true"
+                class="position-absolute sr-only"
+                role="tooltip"
+                style="--tool-tip-position-top: 673px; --tool-tip-position-left: 508.5px"
+                >Restart the conversation</tool-tip
+              >
+              <button
+                id="close"
+                data-target="virtual-agent-container.close"
+                data-close-dialog=""
+                type="button"
+                data-view-component="true"
+                class="Button--danger Button--small Button m-1"
+                aria-describedby="tooltip-99f1d1ad-5232-4d6c-acd7-5a00844c6e1a"
+              >
+                <span class="Button-content">
+                  <span class="Button-visual Button-leadingVisual">
+                    <svg
+                      aria-hidden="true"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      version="1.1"
+                      width="16"
+                      data-view-component="true"
+                      class="octicon octicon-x"
+                    >
+                      <path
+                        d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span class="Button-label">Close</span>
+                </span></button
+              ><tool-tip
+                id="tooltip-99f1d1ad-5232-4d6c-acd7-5a00844c6e1a"
+                for="close"
+                popover="manual"
+                data-direction="s"
+                data-type="description"
+                data-view-component="true"
+                class="position-absolute sr-only"
+                role="tooltip"
+                style="--tool-tip-position-top: 673px; --tool-tip-position-left: 586px"
+                >Close the assistant</tool-tip
+              >
+            </div>
+          </div>
+        </details-dialog>
+      </details>
+    </div>
+  </body>
+</html>
