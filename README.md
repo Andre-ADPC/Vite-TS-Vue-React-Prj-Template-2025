@@ -41,9 +41,13 @@ The project is served by a locally installed Jenkins Server tunnelled to GitHub 
 ## Detailed Project Scope
 
 For more detail please refer to the **[DOCS](./DOCS/)** folder for now.
-The project's tree will give you a bird's eye view of the general layout and how these things are interacting. Most, hopefully all custom JS files will be converted to TypeScript to allow for future maintainability as well as flexibility to test the code in situ, while development progresses.
+The [project's tree](./DOCS/Project_Tree.MD) will give you a bird's eye view of the general layout and how the pieces are interacting. Most, hopefully all, custom JS files will be converted to TypeScript to allow for future maintainability as well as flexibility to test the code in situ, while development progresses.
 
-The Jenkins pipeline is a multi-branch type and is getting structured to accommodate a TDD approach instead of doing Unit and Integration testing as an afterthought. An example [Jenkinsfile](./Jenkins/JenkinsfileExample) will illustrate how the CI/CD process will ultimately function from "continuous commits" through to continuous deployments while the Jenkins server is based on my local machine getting triggered by the Repo's _webhook_ designed for that specific purpose.
+The Jenkins pipeline is a multi-branch type and is getting structured to accommodate a TDD approach instead of doing Unit and Integration testing as an afterthought. An example [Jenkinsfile](./Jenkins/JenkinsfileExample) will illustrate how the CI/CD process will ultimately function from "_continuous commits_" through to continuous deployments while the Jenkins server is based on my local machine getting triggered by the Repo's _webhook_ designed for that specific purpose.
+
+To set up a Jenkins Server on your local machine as preferred, follow the [official Jenkins documentation](https://www.jenkins.io/doc/) while also referring to the local [Jenkins documentation](./DOCS/Build%20a%20Jenkins%20Pipeline.md) in this repository to get started.
+
+Ensure you configure a Pipeline with matching characteristics, then simply apply the `Jenkinsfile` available in this repository.
 
 ## General Project Setup
 
@@ -117,10 +121,26 @@ In the guidance it mentions the following:
 > 3. Choosing `master branch` will treat `/README.md` as your web `index.html`. Choosing `master branch /docs` folder will treat `/docs/README.md` as your web `index.html`.
 > 4. Choose a theme.
 
-The current workflow for creating a new GitHub Pages deployment was not experienced exactly as per the flow described in the SO answer mentioned. Here's a screenshot:
+The current workflow for creating a new GitHub Pages deployment was not experienced exactly as per the flow described in the SO answer mentioned. Refer to the screenshot further below.
 
-<p align="center">
-<img src="./public/images/GitHubPages-Setup-15-12-2024.png" alt="Project Logo" title="Project Hosting on GitHub Pages" width="900" style="box-shadow: 15px 15px 15px #f6f6f6;"></p>
+**NOTE**: I initially added the `www` subdomain prefix in this example to demonstrate the "_ensuing chaos_" that can occur in my specific scenario, but again, this is one of the _subtleties_, in my case it was a battle between setting up the DNS records in Cloudflare with assumed settings as gleaned from Ryan's SO post, vs what GitHub Pages' current DNS Record inspection spits out when the `www` prefix is used.
+
+A good place to start would be to ask "WHAT" is the `www` prefix there for in a domain?
+OK, so a common explanation you will find mostly is the following:
+
+> The "www" stands for World Wide Web and is a subdomain commonly used to indicate that a website is accessible via the internet.
+
+Let's have a deeper look at how a **web address** or also commonly known as a "_**link**_" is constructed as well as how a Universal Identifier technically called a **Universal Resource Locator (URL)** is applied by humans and how computers, network routers, switches and search engines understand them in order to route us to the correct web address.
+
+Things are more convoluted and there are thousands of questions related to the following "variants" of "_**links**_" in reference to the Internet.
+
+I recommend we start this path off from some form of neutral authoritative ground, without re-explaining it here in detail, I refer you to two references to get onto the right path to finding answers:
+
+1. Mozilla Developer Network's (MDN) [World Wide Web](https://developer.mozilla.org/en-US/docs/Glossary/World_Wide_Web) documentation.
+2. Mozilla Developer Network's (MDN) [Choosing between www and non-www URLs](https://developer.mozilla.org/en-US/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs) documentation.
+
+<div style="align: center; text-align:center;">
+<img src="./public/images/GitHubPages-Setup-15-12-2024.png" alt="Project Logo" title="Project Hosting on GitHub Pages" width="900" style="box-shadow: 15px 15px 15px #f6f6f6;"><div class="caption">The initial Custom Domain Configuration Attempt</div></div><br>
 
 The steps at date of publishing this (15th Dec 2024), the setup steps on GH Pages were as follows:
 
@@ -136,7 +156,7 @@ Source
     <path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"></path>
 </svg></span></button></p>
 
-Branch
+`Branch`
 Your GitHub Pages site is currently being built from the master branch. [Learn more about configuring the publishing source for your site](https://docs.github.com/articles/configuring-a-publishing-source-for-github-pages/).
 
 <p><button><span><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-git-branch color-fg-muted">
@@ -163,19 +183,14 @@ Custom domains allow you to serve your site from a domain other than `andre-adpc
 
 ---
 
-<p><span><svg height="42" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="42">
-    <path d="M12 7a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 12 7Zm0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path><path d="M7.328 1.47a.749.749 0 0 1 .53-.22h8.284c.199 0 .389.079.53.22l5.858 5.858c.141.14.22.33.22.53v8.284a.749.749 0 0 1-.22.53l-5.858 5.858a.749.749 0 0 1-.53.22H7.858a.749.749 0 0 1-.53-.22L1.47 16.672a.749.749 0 0 1-.22-.53V7.858c0-.199.079-.389.22-.53Zm.84 1.28L2.75 8.169v7.662l5.419 5.419h7.662l5.419-5.418V8.168L15.832 2.75Z"></path></svg></span><span><button>Check again</button></span></p>
-
-<div>
-    <span align="left">
-        <div class="overflow-hidden ">
+<div style="display: flex; justify-content:space-between;"><div style="margin: 4px;"><svg height="42" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="42">
+    <path d="M12 7a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 12 7Zm0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path><path d="M7.328 1.47a.749.749 0 0 1 .53-.22h8.284c.199 0 .389.079.53.22l5.858 5.858c.141.14.22.33.22.53v8.284a.749.749 0 0 1-.22.53l-5.858 5.858a.749.749 0 0 1-.53.22H7.858a.749.749 0 0 1-.53-.22L1.47 16.672a.749.749 0 0 1-.22-.53V7.858c0-.199.079-.389.22-.53Zm.84 1.28L2.75 8.169v7.662l5.419 5.419h7.662l5.419-5.418V8.168L15.832 2.75Z"></path></svg></div><div><div class="overflow-hidden ">
             <div>www.frameworkblurr.adpc-llc.com is improperly configured.</div>
             <div>Domain's DNS record could not be retrieved. For more information, see<a href="https://docs.github.com/articles/setting-up-a-custom-domain-with-github-pages/"> documentation</a>
             </div>
             <div>(InvalidDNSError).</div>
-        </div>
-    </span>
-</div> 
+        </div></div><div><button>Check again</button></div></div>
+</div>
 
 ---
 
@@ -191,3 +206,13 @@ When HTTPS is enforced, your site will only be served over HTTPS. <u><a href="ht
 All the above might be a bit unnerving, especially for folks who are not sure at all on how to navigate the "mysterious waters" of DNS, `A` records, `CNAME` conventions, etc. all that confidently just yet. However, there's no need to be concerned at this point. We have to start the process somewhere, and in most cases the logical thought process is to do so from the `source`, in this case the GitHub Repository we wish to publish on a live website.
 
 As you will notice all these "_red flags_" are not revealed as explicitly in Ryan's post on Stackoverflow, but they would be when the process was started from the **GitHub Pages** UI
+
+#### Configuring Secure HTTPS Connectivity
+
+Should you experience trouble with configuring SSL/TLS connections, you can refer to GitHub Pages' documentation [Securing your GitHub Pages site with HTTPS](https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https) you'll be guided to add a layer of encryption that prevents others from snooping on or tampering with traffic to your site.
+
+There's a handy AI Chat interface which will run an analysis to the extent of its abilities and guide you through potential issues.
+
+It was so in this particular configuration's case and here's an excerpt of the chat:
+
+##### Virtual Assistant
