@@ -86,12 +86,13 @@
 
     </head>
     <body>
-      <!-- Chat Component -->
+      <!-- Chat App Page Component -->
       <div class="flex h-screen antialiased text-gray-800">
         <div class="flex flex-row h-full w-full overflow-x-hidden">
-          <div class="flex flex-col py-8 pl-6 pr-2 w-64 bg-white flex-shrink-0">
+          <!-- Chat Page Side-bar -->
+          <div class="flex flex-col py-8 pl-6 pr-2 w-64 bg-white flex-shrink-0 shadow p-3">
             <div class="flex flex-row items-center justify-center h-12 w-full">
-              <div class="flex items-center justify-center rounded-2xl text-green-700 bg-green-100 h-10 w-10">
+              <div class="flex items-center justify-center rounded-xl text-green-700 bg-green-100 h-10 w-10">
                 <svg
                   class="w-6 h-6"
                   fill="none"
@@ -107,35 +108,57 @@
                   ></path>
                 </svg>
               </div>
-              <div class="ml-2 font-bold text-2xl">Quick Chat</div>
+              <div class="ml-2 font-bold text-2xl">Multi-Chat</div>
             </div>
-        <div class="ml-2">Troubleshoot Pages SSL issues with our Virtual Agent</div>
+            <div class="flex flex-row items-center justify-between text-xs mb-4">
+              <div class="font-bold  text-green-700 text-center">Current Conversation & Topic</div>
+            </div>
+            <!-- Active Chat Topic -->
+            <div class="ml-2 text-xs" >Troubleshoot Pages SSL issues with our Virtual Agent</div>
             <div
               class="flex flex-col items-center bg-green-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg"
             >
-              <div class="h-20 w-20 rounded-full border overflow-hidden">
-                <img src="https://avatars.githubusercontent.com/u/86864273?size=40" alt="Active User Avatar" class="h-full w-full" />
+              <div class="h-16 w-16 rounded-full border overflow-hidden">
+                <img src="https://avatars1.githubusercontent.com/u/480938" alt="Active Sender Avatar" class="h-full w-full" />
               </div>
-              <div class="text-sm font-semibold mt-2">Andre-ADPC</div>
-              <div class="text-xs text-gray-500">Human, Tarantula Nebula | Consultant - Contractor - Nomad</div>
+              <div class="text-sm font-semibold mt-2">GitHub Pages Agent</div>
+              <div class="text-xs text-gray-500">Droid, Tarantula Nebula | GitHub Assistant</div>
               <div class="flex flex-row items-center mt-3">
-                <div class="flex flex-col justify-center h-4 w-8 bg-green-500 rounded-full">
+                <div class="flex flex-col justify-center h-4 w-8 bg-yellow-500 rounded-full">
                   <div class="h-3 w-3 bg-white rounded-full self-end mr-1"></div>
                 </div>
                 <div class="leading-none ml-1 text-xs">Active</div>
               </div>
             </div>
-            <div class="flex flex-col mt-8">
-              <div class="flex flex-row items-center justify-between text-xs">
+
+            <!-- Chat Search Field -->
+            <div class="relative mt-2">
+              <input
+                type="text"
+                placeholder="Search Chats"
+                class="w-full px-4 py-2 text-sm border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+              />
+              <button
+                class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 hover:text-gray-600"
+                aria-label="Search"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M10.5 17a6.5 6.5 0 100-13 6.5 6.5 0 000 13z" />
+                </svg>
+              </button>
+            </div>
+            <!-- Conversation Activity and History Pane -->
+            <div class="flex flex-col mt-2">
+              <div class="flex flex-row items-center justify-between text-xs mb-1">
                 <span class="font-bold">Active Conversations</span>
-                <span class="flex items-center justify-center bg-gray-300 h-4 w-4 rounded-full">1</span>
+                <span class="flex items-center justify-center bg-green-300 h-6 w-6 rounded-full font-bold">6</span>
               </div>
-              <div class="flex flex-col space-y-1 mt-4 -mx-2 h-48 overflow-y-auto">
-                <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2">
+              <div class="flex flex-col space-y-1 mt-4 -mx-2 h-40 overflow-y-auto">
+                <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2" aria-label="Open this Chat">
                   <div class="flex items-center justify-center h-8 w-8 bg-green-200 rounded-full">Z</div>
                   <div class="ml-2 text-sm font-semibold">Zach Brunsen</div>
                 </button>
-                <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2">
+                <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2" aria-label="Open this Chat">
                   <div class="flex items-center justify-center h-8 w-8 bg-indigo-200 rounded-full">C</div>
                   <div class="ml-2 text-sm font-semibold">Colleen Curtis</div>
                   <div
@@ -144,11 +167,11 @@
                     2
                   </div>
                 </button>
-                <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2">
+                <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2" aria-label="Open this Chat">
                   <div class="flex items-center justify-center h-8 w-8 bg-orange-200 rounded-full">P</div>
                   <div class="ml-2 text-sm font-semibold">Philip Tucker</div>
                 </button>
-                <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2">
+                <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2" aria-label="Open this Chat">
                   <div class="flex items-center justify-center h-8 w-8 bg-pink-200 rounded-full">C</div>
                   <div class="ml-2 text-sm font-semibold">Christine Reid</div>
                   <div
@@ -157,30 +180,99 @@
                     1
                   </div>
                 </button>
-                <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2">
+                <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2" aria-label="Open this Chat">
                   <div class="flex items-center justify-center h-8 w-8 bg-purple-200 rounded-full">J</div>
                   <div class="ml-2 text-sm font-semibold">Jerry Guzman</div>
                 </button>
               </div>
+              <!-- Archived Chats Section -->
               <div class="flex flex-row items-center justify-between text-xs mt-6">
-                <span class="font-bold">Archivied</span>
-                <span class="flex items-center justify-center bg-gray-300 h-4 w-4 rounded-full">7</span>
+                <span class="font-bold">Archived Chats</span>
+                <span class="flex items-center justify-center bg-gray-300 h-6 w-6 rounded-full font-bold">5</span>
+                <button
+                  class="flex items-center justify-center bg-gray-300 h-6 w-6 rounded-full font-bold"
+                  aria-label="Toggle Archived Chats"
+                >
+                <!-- SVG for toggle -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-4 w-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                  </svg>
+                </button>
+
               </div>
-              <div class="flex flex-col space-y-1 mt-4 -mx-2">
-                <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2">
-                  <div class="flex items-center justify-center h-8 w-8 bg-gray-200 rounded-full">H</div>
-                  <div class="ml-2 text-sm font-semibold">Henry Boyd</div>
+              <!-- Archived Chats -->
+              <div class="hidden flex-col space-y-1 mt-4 -mx-2 overflow-y-auto" id="archived-chats">
+                <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2" aria-label="Open this Chat">
+                  <div class="flex items-center justify-center h-8 w-8 bg-gray-200 rounded-full">Z</div>
+                  <div class="ml-2 text-sm font-semibold">Henry Ford</div>
+                </button>
+                <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2" aria-label="Open this Chat">
+                  <div class="flex items-center justify-center h-8 w-8 bg-gray-200 rounded-full">C</div>
+                  <div class="ml-2 text-sm font-semibold">Jean-Luc Picard</div>
+                  <div
+                    class="flex items-center justify-center ml-auto text-xs text-white bg-red-500 h-4 w-4 rounded leading-none"
+                  >
+                    80
+                  </div>
+                </button>
+                <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2" aria-label="Open this Chat">
+                  <div class="flex items-center justify-center h-8 w-8 bg-gray-200 rounded-full">P</div>
+                  <div class="ml-2 text-sm font-semibold">Sam Carter</div>
+                </button>
+                <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2" aria-label="Open this Chat">
+                  <div class="flex items-center justify-center h-8 w-8 bg-gray-200 rounded-full">C</div>
+                  <div class="ml-2 text-sm font-semibold">Moby Dick</div>
+                  <div
+                    class="flex items-center justify-center ml-auto text-xs text-white bg-red-500 h-4 w-4 rounded leading-none" alt="Unread Messages"
+                  >
+                    1
+                  </div>
+                </button>
+                <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2" aria-label="Open this Chat">
+                  <div class="flex items-center justify-center h-8 w-8 bg-gray-200 rounded-full">J</div>
+                  <div class="ml-2 text-sm font-semibold">Jack Sparrow</div>
                 </button>
               </div>
             </div>
           </div>
 
-          <div class="flex flex-col flex-auto h-full p-6">
-            <div class="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-100 h-full p-4">
+          <!-- Chat Window Body -->
+          <div class="flex flex-col h-full w-full relative">
+            <!-- Top UI Portion -->
+            <div class="absolute top-0 left-0 w-full bg-white shadow p-3 z-10">
+              <div class="flex items-center justify-between">
+                <h2 class="text-lg font-bold">Chat with Current Receiver</h2>
+                <button
+                      class="flex items-center justify-center bg-green-500 hover:bg-green-600 rounded-xl text-white font-bold px-4 py-1 flex-shrink-0"
+                    >
+                      <span>Close Chat</span>
+                      <span class="ml-2">
+                        <svg
+                          class="w-4 h-4 transform rotate-180 -mt-px"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+              </div>
+            </div>
+
+            <!-- Main Chat Container -->
+            <div class="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-200 h-full p-4 mt-16 ml-2 mr-2">
               <div class="flex flex-col h-full overflow-x-auto mb-4">
                 <div class="flex flex-col h-full">
                   <div class="grid grid-cols-12 gap-y-2">
-                    <!-- GHP Agent -->
+
+                    <!-- Chat Receiver -->
                     <div class="col-start-1 col-end-8 p-3 rounded-lg">
                       <div class="flex flex-row items-center">
                         <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 flex-shrink-0">
@@ -189,7 +281,7 @@
                             height="40"
                             width="40"
                             data-target="virtual-agent-message.avatar"
-                            alt="Virtual Assistant avatar"
+                            alt="Virtual Receiver Avatar"
                             src="https://avatars1.githubusercontent.com/u/480938"
                           />
                         </div>
@@ -198,7 +290,8 @@
                         </div>
                       </div>
                     </div>
-                    <!-- GHP Agent -->
+
+                    <!-- Chat Receiver -->
                     <div class="col-start-1 col-end-8 p-3 rounded-lg">
                       <div class="flex flex-row items-center">
                         <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 flex-shrink-0">
@@ -207,7 +300,7 @@
                             height="40"
                             width="40"
                             data-target="virtual-agent-message.avatar"
-                            alt="Virtual Assistant avatar"
+                            alt="Virtual Receiver Avatar"
                             src="https://avatars1.githubusercontent.com/u/480938"
                           />
                         </div>
@@ -216,7 +309,8 @@
                         </div>
                       </div>
                     </div>
-                    <!-- GHP User -->
+
+                    <!-- Chat Sender -->
                     <div class="col-start-6 col-end-13 p-3 rounded-lg">
                       <div class="flex items-center justify-start flex-row-reverse">
                         <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 flex-shrink-0">
@@ -225,7 +319,7 @@
                             height="40"
                             width="40"
                             data-target="virtual-agent-message.avatar"
-                            alt="Chat User avatar"
+                            alt="Sender Avatar"
                             src="https://avatars.githubusercontent.com/u/86864273?size=40"
                           />
                         </div>
@@ -234,7 +328,8 @@
                         </div>
                       </div>
                     </div>
-                    <!-- GHP Agent -->
+
+                    <!-- Chat Receiver -->
                     <div class="col-start-1 col-end-8 p-3 rounded-lg">
                       <div class="flex flex-row items-center">
                         <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 flex-shrink-0">
@@ -243,7 +338,7 @@
                             height="40"
                             width="40"
                             data-target="virtual-agent-message.avatar"
-                            alt="Virtual Assistant avatar"
+                            alt="Virtual Receiver Avatar"
                             src="https://avatars1.githubusercontent.com/u/480938"
                           />
                         </div>
@@ -253,7 +348,7 @@
                       </div>
                     </div>
 
-                      <!-- GHP User -->
+                    <!-- Chat Sender -->
                     <div class="col-start-6 col-end-13 p-3 rounded-lg">
                       <div class="flex items-center justify-start flex-row-reverse">
                         <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 flex-shrink-0">
@@ -262,7 +357,7 @@
                             height="40"
                             width="40"
                             data-target="virtual-agent-message.avatar"
-                            alt="Chat User avatar"
+                            alt="Sender Avatar"
                             src="https://avatars.githubusercontent.com/u/86864273?size=40"
                           />
                         </div>
@@ -271,7 +366,8 @@
                         </div>
                       </div>
                     </div>
-                      <!-- GHP Agent -->
+
+                    <!-- Chat Receiver -->
                     <div class="col-start-1 col-end-8 p-3 rounded-lg">
                       <div class="flex flex-row items-center">
                         <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 flex-shrink-0">
@@ -280,7 +376,7 @@
                             height="40"
                             width="40"
                             data-target="virtual-agent-message.avatar"
-                            alt="Virtual Assistant avatar"
+                            alt="Virtual Receiver Avatar"
                             src="https://avatars1.githubusercontent.com/u/480938"
                           />
                         </div>
@@ -289,7 +385,7 @@
                         </div>
                       </div>
                     </div>
-                      <!-- GHP Agent -->
+                      <!-- Chat Receiver -->
                       <div class="col-start-1 col-end-8 p-3 rounded-lg">
                         <div class="flex flex-row items-center">
                           <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 flex-shrink-0">
@@ -298,7 +394,7 @@
                               height="40"
                               width="40"
                               data-target="virtual-agent-message.avatar"
-                              alt="Virtual Assistant avatar"
+                              alt="Virtual Receiver Avatar"
                               src="https://avatars1.githubusercontent.com/u/480938"
                             />
                           </div>
@@ -310,11 +406,11 @@
                                 <li>There is an AAAA record present for this domain, please remove this.</li>    
                             </ol>
                             </div>
-                        </div>
+                          </div>
                         </div>
                       </div>
 
-                                          <!-- GHP Agent -->
+                    <!-- Chat Receiver -->
                     <div class="col-start-1 col-end-8 p-3 rounded-lg">
                       <div class="flex flex-row items-center">
                         <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 flex-shrink-0">
@@ -323,7 +419,7 @@
                             height="40"
                             width="40"
                             data-target="virtual-agent-message.avatar"
-                            alt="Virtual Assistant avatar"
+                            alt="Virtual Receiver Avatar"
                             src="https://avatars1.githubusercontent.com/u/480938"
                           />
                         </div>
@@ -333,41 +429,7 @@
                       </div>
                     </div>
 
-                                          <!-- GHP Agent -->
-                                          <div class="col-start-1 col-end-8 p-3 rounded-lg">
-                                            <div class="flex flex-row items-center">
-                                              <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 flex-shrink-0">
-                                                <img
-                                                  class="avatar rounded-full avatar-user mx-2"
-                                                  height="40"
-                                                  width="40"
-                                                  data-target="virtual-agent-message.avatar"
-                                                  alt="Virtual Assistant avatar"
-                                                  src="https://avatars1.githubusercontent.com/u/480938"
-                                                />
-                                              </div>
-                                              <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
-                                                <div>Can we help you with troubleshooting SSL errors?</div>
-                                              </div>
-                                              <div>
-                                                <section data-target="virtual-agent-message.choicesContainer" class="mx-auto text-center">
-                                                    <virtual-agent-message-select data-target="virtual-agent-message.messageSelect" data-catalyst="">
-                                                      <select virtual-agent-element="" class="form-select" data-target="virtual-agent-message-select.select" data-action="change:virtual-agent-message-select#choose" aria-label="Choose Help topic" disabled="">
-                                                        <option disabled="" selected="">Please select a choice</option>
-                                                        <option value="Serving content errors">Serving content errors</option>
-                                                        <option value="Configuring a Cloudflare domain">Configuring a Cloudflare domain</option>
-                                                        <option value="Setting CAA">Setting CAA</option>
-                                                        <option value="Issues with www domain and CNAME">Issues with www domain and CNAME</option>
-                                                        <option value="No thanks">No thanks</option>
-                                                      </select>
-                                                    </virtual-agent-message-select>
-                                                  </section>
-                                              </div>
-                                            </div>
-                                          </div>
-                      
-
-                      <!-- GHP User -->
+                    <!-- Chat Sender -->
                     <div class="col-start-6 col-end-13 p-3 rounded-lg">
                       <div class="flex items-center justify-start flex-row-reverse">
                         <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 flex-shrink-0">
@@ -386,6 +448,7 @@
                         </div>
                       </div>
                     </div>
+                    <!-- Chat Receiver -->
                     <div class="col-start-1 col-end-8 p-3 rounded-lg">
                       <div class="flex flex-row items-center">
                         <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 flex-shrink-0">
@@ -403,6 +466,8 @@
                         </div>
                       </div>
                     </div>
+
+                    <!-- Chat Sender -->
                     <div class="col-start-1 col-end-8 p-3 rounded-lg">
                       <div class="flex flex-row items-center">
                         <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 flex-shrink-0">
@@ -411,13 +476,14 @@
                             height="40"
                             width="40"
                             data-target="virtual-agent-message.avatar"
-                            alt="Virtual Assistant avatar"
+                            alt="Virtual Receiver Avatar"
                             src="https://avatars1.githubusercontent.com/u/480938"
                           />
                         </div>
                         <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
                             <div>Lorem ipsum dolor sit amet, Entradis Agentus Five.</div>
-                        <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
+                        <!-- Voice Note Start -->    
+                        <div class="relative ml-3 text-sm bg-indigo-600 py-2 px-4 shadow rounded-xl">
                           <div class="flex flex-row items-center">
                             <button
                               class="flex items-center justify-center bg-green-600 hover:bg-green-800 rounded-full h-8 w-10"
@@ -478,38 +544,42 @@
                             </div>
                           </div>
                         </div>
+                        <!-- Voice Note End --> 
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="flex flex-row items-center h-16 rounded-xl bg-white w-full px-4">
-                <div>
-                  <button class="flex items-center justify-center text-gray-400 hover:text-gray-600">
-                    <svg
-                      class="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-                <div class="flex-grow ml-4">
-                  <div class="relative w-full">
-                    <input
-                      type="text"
-                      class="flex w-full border rounded-xl focus:outline-none focus:border-green-300 pl-4 h-10"
-                    />
+            </div>
+        </div>
+        <div>
+        <!-- Message Entry Container -->
+        <div class="flex flex-row items-center h-16 rounded-xl bg-green-200 w-full px-4 mt-5 mr-5 ">
+                  <!-- Messaging Tool Buttons -->
+                  <div class="flex flex-row flex-nowrap justify-items-start align-middle ml-2 mr-2">
+                    <!-- Add Attachment Button -->
+                    <div>
+                    <button class="flex items-center justify-center ml-0 mr-2 text-indigo-600 hover:text-indigo-900">
+                      <svg
+                        class="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"
+                        ></path>
+                      </svg>
+                    </button>
+                    </div>
+                    <!-- Add Emoji Button -->
+                    <div>
                     <button
-                      class="absolute flex items-center justify-center h-full w-12 right-0 top-0 text-gray-400 hover:text-gray-600"
+                      class="flex items-center justify-center ml-0 mr-2  text-indigo-600 hover:text-indigo-900"
                     >
                       <svg
                         class="w-6 h-6"
@@ -526,35 +596,95 @@
                         ></path>
                       </svg>
                     </button>
+                    </div>
                   </div>
-                </div>
-                <div class="ml-4">
-                  <button
-                    class="flex items-center justify-center bg-green-500 hover:bg-green-600 rounded-xl text-white px-4 py-1 flex-shrink-0"
-                  >
-                    <span>Send</span>
-                    <span class="ml-2">
-                      <svg
-                        class="w-4 h-4 transform rotate-45 -mt-px"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+                  <!-- Message Entry Field -->
+                  <div class="flex-grow ml-4">
+                    <div class="relative w-full">
+                      <input
+                        type="text"
+                        class="flex w-full border rounded-xl focus:outline-none focus:border-green-300 pl-4 h-10"
+                      />
+                      <!-- Add Voice Note Button -->
+                      <button
+                        class="absolute flex items-center justify-center h-full w-12 right-0 top-0 text-gray-600 hover:text-black"
                       >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                        ></path>
-                      </svg>
-                    </span>
-                  </button>
+                      <svg 
+                      class="w-8 h-8"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      viewBox="0 -8000 33500 49344"
+                      xmlns="http://www.w3.org/2000/svg" 
+                      >
+                        <g fill="currentColor">
+                        <path d="M10534 0h2c3937 0 7158 3221 7158 7159v8218c0 3938-3221 7159-7158 7159h-2c-3938 0-7159-3221-7159-7159V7159C3375 3221 6596 0 10534 0zm2 1995h-2c-1428 0-2724 582-3660 1518-934 934-1513 2225-1513 3646v8218c0 1421 580 2712 1513 3646 936 936 2233 1518 3660 1518h2c1428 0 2724-582 3660-1518 933-934 1513-2225 1513-3646V7159c0-1421-580-2712-1513-3646-936-936-2232-1518-3660-1518"/>
+                        <path d="M18714 13600a831 831 0 01 831-831 831 831 0 01 831 831h-1662zm0 1921V13600h1662v1921h-1662zm1662 0a831 831 0 01-831 831 831 831 0 01-831-831h1662zm-9840 9840v-1662l420-11 413-32 407-52 403-72 394-91 386-111 380-129 371-147 361-164 352-182 343-198 332-213 321-229 310-244 297-258 285-271 271-285 258-297 244-310 229-321 213-332 198-343 182-352 164-361 147-371 129-380 111-386 91-394 72-403 52-407 32-413 11-420h1662l-13 504-37 498-64 492-87 483-110 476-134 467-156 455-176 447-198 437-219 424-237 411-257 400-275 385-292 372-310 357-326 342-342 326-357 310-372 292-385 275-400 257-411 237-424 219-437 198-447 176-455 156-467 134-476 110-483 87-492 64-498 37-504 13zm0 0a831 831 0 01-831-831 831 831 0 01 831-831v1662zm0-831v831-831zm0 831a831 831 0 01-831-831 831 831 0 01 831-831v1662zm-9840-9840h1662l11 420 32 413 52 407 72 403 91 394 111 386 129 380 147 371 164 361 182 352 198 343 213 332 229 321 244 310 258 297 271 285 285 271 297 258 310 244 321 229 332 213 343 198 352 182 361 164 371 147 380 129 386 111 394 91 403 72 407 52 413 32 420 11v1662l-504-13-498-37-492-64-483-87-476-110-467-134-455-156-447-176-437-198-424-219-411-237-400-257-385-275-372-292-357-310-342-326-326-342-310-357-292-372-275-385-257-400-237-411-219-424-198-437-176-447-156-455-134-467-110-476-87-483-64-492-37-498-13-504zm0 0a831 831 0 01 831-831 831 831 0 01 831 831H696zM2358 13600v1921H696V13600h1662zm-1662 0a831 831 0 01 831-831 831 831 0 01 831 831H696zm136 18273a831 831 0 01-831-831 831 831 0 01 831-831v1662zm19948-1699v1662l-1115 1-1167 1-1210 2-1247 3-1278 3-1299 3-1315 3-1323 3-1323 4-1317 3-1303 3-1281 3-1253 3-1218 2-1174 1-1124 1v-1662l1123-1 1174-1 1217-2 1252-3 1281-3 1303-3 1317-3 1323-4 1323-3 1315-3 1299-3 1278-3 1248-3 1211-2 1167-1 1116-1zm0 0a831 831 0 01 831 831 831 831 0 01-831 831v-1662zM9838 24628a831 831 0 01 831-831 831 831 0 01 831 831H9838zm1628 6367H9804l1-397 1-399 2-401 2-402 3-403 3-404 3-404 3-403 3-402 3-400 3-399 3-396 2-395 2-391 1-388 1-384h1662l-1 386-1 390-2 394-2 396-3 398-3 400-3 402-3 402-3 403-3 402-3 402-3 402-2 400-2 398-1 396-1 394zm0 0a831 831 0 01-831 831 831 831 0 01-831-831h1662" fill-rule="nonzero"/>
+                      </g>
+                    </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Message Send Button -->
+                  <div class="ml-4">
+                    <button
+                      class="flex items-center justify-center bg-green-500 hover:bg-green-600 rounded-xl text-white font-bold px-4 py-1 flex-shrink-0"
+                    >
+                      <span>Send</span>
+                      <span class="ml-2">
+                        <svg
+                          class="w-4 h-4 transform rotate-45 -mt-px"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
                 </div>
+        </div>
+      </div>
+      <!-- Chat + Selection Component -->
+      <div class="col-start-1 col-end-8 p-3 rounded-lg">
+        <div class="flex flex-row items-center">
+          <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 flex-shrink-0">
+            <img
+              class="avatar rounded-full avatar-user mx-2"
+              height="40"
+              width="40"
+              data-target="virtual-agent-message.avatar"
+              alt="Virtual Receiver Avatar"
+              src="https://avatars1.githubusercontent.com/u/480938"
+            />
+          </div>
+          <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
+            <div>Can we help you with troubleshooting SSL errors?</div>
+              <!-- Selection Section --> 
+              <div>
+                <section data-target="virtual-agent-message.choicesContainer" class="mx-auto text-center">
+                  <virtual-agent-message-select data-target="virtual-agent-message.messageSelect" data-catalyst="">
+                    <select virtual-agent-element="" class="form-select" data-target="virtual-agent-message-select.select" data-action="change:virtual-agent-message-select#choose" aria-label="Choose Help topic" disabled="">
+                      <option disabled="" selected="">Please select a choice</option>
+                      <option value="Serving content errors">Serving content errors</option>
+                      <option value="Configuring a Cloudflare domain">Configuring a Cloudflare domain</option>
+                      <option value="Setting CAA">Setting CAA</option>
+                      <option value="Issues with www domain and CNAME">Issues with www domain and CNAME</option>
+                      <option value="No thanks">No thanks</option>
+                    </select>
+                  </virtual-agent-message-select>
+                </section>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </body>
+    </div>
+  </body>
 </html>
+
