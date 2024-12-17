@@ -190,18 +190,19 @@
                 <span class="font-bold">Archived Chats</span>
                 <span class="flex items-center justify-center bg-gray-300 h-6 w-6 rounded-full font-bold">5</span>
                 <button
-                  class="flex items-center justify-center bg-gray-300 h-6 w-6 rounded-full font-bold"
+                id="toggle-archived-chats"
+                  class="flex items-center justify-center bg-green-500 h-6 w-6 rounded-full font-bold"
                   aria-label="Toggle Archived Chats"
                 >
                 <!-- SVG for toggle -->
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-4 w-4">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                <svg id="arch-cht-toggle-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
 
               </div>
               <!-- Archived Chats -->
-              <div class="hidden flex-col space-y-1 mt-4 -mx-2 overflow-y-auto" id="archived-chats">
+              <div class="hidden flex-col space-y-1 mt-4 -mx-2 overflow-y-auto" id="archived-chats-container">
                 <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2" aria-label="Open this Chat">
                   <div class="flex items-center justify-center h-8 w-8 bg-gray-200 rounded-full">Z</div>
                   <div class="ml-2 text-sm font-semibold">Henry Ford</div>
@@ -267,9 +268,9 @@
             </div>
 
             <!-- Main Chat Container -->
-            <div class="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-200 h-full p-4 mt-16 ml-2 mr-2">
-              <div class="flex flex-col h-full overflow-x-auto mb-4">
-                <div class="flex flex-col h-full">
+            <div class="flex flex-col flex-auto flex-grow-0 rounded-2xl bg-gray-200 h-full p-4 mt-16 ml-2 mr-2">
+              <div class="flex flex-col overflow-y-auto mb-32">
+                <div class="flex flex-col flex-grow overflow-y-auto">
                   <div class="grid grid-cols-12 gap-y-2">
 
                     <!-- Chat Receiver -->
@@ -285,7 +286,10 @@
                             src="https://avatars1.githubusercontent.com/u/480938"
                           />
                         </div>
-                        <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
+                        <div class="relative ml-2 text-sm py-2 px-4 bg-white rounded-bl-3xl rounded-tr-3xl rounded-br-3xl shadow">
+                        <!-- Alt Format of Chat Bubble: 
+                            class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl:>
+                        -->
                           <div>Hi, @Andre-ADPC.</div>
                         </div>
                       </div>
@@ -304,7 +308,7 @@
                             src="https://avatars1.githubusercontent.com/u/480938"
                           />
                         </div>
-                        <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
+                        <div class="relative ml-2 text-sm py-2 px-4 bg-white rounded-bl-3xl rounded-tr-3xl rounded-br-3xl shadow">
                           <div>Are you having troubles with HTTPS on your GitHub Pages site using a custom domain?</div>
                         </div>
                       </div>
@@ -323,7 +327,10 @@
                             src="https://avatars.githubusercontent.com/u/86864273?size=40"
                           />
                         </div>
-                        <div class="relative mr-3 text-sm bg-green-100 py-2 px-4 shadow rounded-xl">
+                        <div class="relative mr-2 text-sm py-2 px-4 bg-green-200 rounded-bl-3xl rounded-tl-3xl rounded-br-3xl shadow">
+                          <!---
+                          Alt Format of Chat Bubble:
+                          class="relative mr-3 text-sm bg-green-100 py-2 px-4 shadow rounded-xl"                                         -->
                           <div>Yes</div>
                         </div>
                       </div>
@@ -342,7 +349,7 @@
                             src="https://avatars1.githubusercontent.com/u/480938"
                           />
                         </div>
-                        <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
+                        <div class="relative ml-2 text-sm py-2 px-4 bg-white rounded-bl-3xl rounded-tr-3xl rounded-br-3xl shadow">
                           <div>What domain are you facing problems with?</div>
                         </div>
                       </div>
@@ -361,7 +368,7 @@
                             src="https://avatars.githubusercontent.com/u/86864273?size=40"
                           />
                         </div>
-                        <div class="relative mr-3 text-sm bg-green-100 py-2 px-4 shadow rounded-xl">
+                        <div class="relative mr-2 text-sm py-2 px-4 bg-green-200 rounded-bl-3xl rounded-tl-3xl rounded-br-3xl shadow">
                           <div>frameworkblurr.adpc-llc.com</div>
                         </div>
                       </div>
@@ -380,7 +387,7 @@
                             src="https://avatars1.githubusercontent.com/u/480938"
                           />
                         </div>
-                        <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
+                        <div class="relative ml-2 text-sm py-2 px-4 bg-white rounded-bl-3xl rounded-tr-3xl rounded-br-3xl shadow">
                           <div>Running domain check on frameworkblurr.adpc-llc.com, please wait...</div>
                         </div>
                       </div>
@@ -398,7 +405,7 @@
                               src="https://avatars1.githubusercontent.com/u/480938"
                             />
                           </div>
-                          <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
+                          <div class="relative ml-2 text-sm py-2 px-4 bg-white rounded-bl-3xl rounded-tr-3xl rounded-br-3xl shadow">
                             <div>
                                 <p>I found these specific SSL issues:</p><br>   <p>We encountered the following errors attempting to issue a certificate:</p><br>
                             <ol type="1">
@@ -423,7 +430,7 @@
                             src="https://avatars1.githubusercontent.com/u/480938"
                           />
                         </div>
-                        <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
+                        <div class="relative ml-2 text-sm py-2 px-4 bg-white rounded-bl-3xl rounded-tr-3xl rounded-br-3xl shadow">
                           <div>Running domain check on frameworkblurr.adpc-llc.com, please wait...</div>
                         </div>
                       </div>
@@ -442,7 +449,7 @@
                             src="https://avatars.githubusercontent.com/u/86864273?size=40"
                           />
                         </div>
-                        <div class="relative mr-3 text-sm bg-green-100 py-2 px-4 shadow rounded-xl">
+                        <div class="relative mr-2 text-sm py-2 px-4 bg-green-200 rounded-bl-3xl rounded-tl-3xl rounded-br-3xl shadow">
                           <div>Lorem ipsum dolor sit amet, Entradis Usereticus Three.</div>
                           <div class="absolute text-xs bottom-0 right-0 -mb-5 mr-2 text-gray-500">Seen</div>
                         </div>
@@ -461,7 +468,7 @@
                             src="https://avatars1.githubusercontent.com/u/480938"
                           />
                         </div>
-                        <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
+                        <div class="relative ml-2 text-sm py-2 px-4 bg-white rounded-bl-3xl rounded-tr-3xl rounded-br-3xl shadow">
                           <div>Lorem ipsum dolor sit amet, Entradis Agentus Four.</div>
                         </div>
                       </div>
@@ -480,10 +487,10 @@
                             src="https://avatars1.githubusercontent.com/u/480938"
                           />
                         </div>
-                        <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
+                        <div class="relative ml-2 text-sm py-2 px-4 bg-white rounded-bl-3xl rounded-tr-3xl rounded-br-3xl shadow">
                             <div>Lorem ipsum dolor sit amet, Entradis Agentus Five.</div>
                         <!-- Voice Note Start -->    
-                        <div class="relative ml-3 text-sm bg-indigo-600 py-2 px-4 shadow rounded-xl">
+                        <div class="relative ml-3 text-sm bg-gray-600 py-2 px-4 shadow rounded-xl">
                           <div class="flex flex-row items-center">
                             <button
                               class="flex items-center justify-center bg-green-600 hover:bg-green-800 rounded-full h-8 w-10"
@@ -554,12 +561,19 @@
         </div>
         <div>
         <!-- Message Entry Container -->
-        <div class="flex flex-row items-center h-16 rounded-xl bg-green-200 w-full px-4 mt-5 mr-5 ">
+        <div class="absolute bottom-0 left-0 w-full flex flex-row items-center h-16  bg-green-200 shadow p-3 z-10 px-4 mt-5 mr-5 ">
+          <!-- Optional Absolute Positioning:
+            <div class="absolute bottom-0 left-0 w-full flex flex-row items-center h-16 rounded-xl bg-green-200 shadow p-3 z-10 px-4 mt-5 mr-5 ">
+            
+            <div class="flex flex-row items-center h-16 rounded-xl bg-green-200 w-full px-4 mt-5 mr-5 ">
+
+            <div class="absolute top-0 left-0 w-full bg-white shadow p-3 z-10">
+          -->
                   <!-- Messaging Tool Buttons -->
                   <div class="flex flex-row flex-nowrap justify-items-start align-middle ml-2 mr-2">
                     <!-- Add Attachment Button -->
                     <div>
-                    <button class="flex items-center justify-center ml-0 mr-2 text-indigo-600 hover:text-indigo-900">
+                    <button class="flex items-center justify-center ml-0 mr-2 text-gray-600 hover:text-black">
                       <svg
                         class="w-5 h-5"
                         fill="none"
@@ -579,7 +593,7 @@
                     <!-- Add Emoji Button -->
                     <div>
                     <button
-                      class="flex items-center justify-center ml-0 mr-2  text-indigo-600 hover:text-indigo-900"
+                      class="flex items-center justify-center ml-0 mr-2  text-gray-600 hover:text-black"
                     >
                       <svg
                         class="w-6 h-6"
@@ -651,6 +665,8 @@
         </div>
       </div>
       <!-- Chat + Selection Component -->
+      <!--
+      
       <div class="col-start-1 col-end-8 p-3 rounded-lg">
         <div class="flex flex-row items-center">
           <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 flex-shrink-0">
@@ -663,10 +679,10 @@
               src="https://avatars1.githubusercontent.com/u/480938"
             />
           </div>
-          <div class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl">
+          <div class="relative ml-2 text-sm py-2 px-4 bg-white rounded-bl-3xl rounded-tr-3xl rounded-br-3xl shadow">
             <div>Can we help you with troubleshooting SSL errors?</div>
               <!-- Selection Section --> 
-              <div>
+              <!-- <div>
                 <section data-target="virtual-agent-message.choicesContainer" class="mx-auto text-center">
                   <virtual-agent-message-select data-target="virtual-agent-message.messageSelect" data-catalyst="">
                     <select virtual-agent-element="" class="form-select" data-target="virtual-agent-message-select.select" data-action="change:virtual-agent-message-select#choose" aria-label="Choose Help topic" disabled="">
@@ -682,9 +698,27 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
   </body>
+  <script>
+    // JavaScript to toggle Archived Chats visibility
+    const toggleButton = document.getElementById('toggle-archived-chats');
+    const archivedChatsContainer = document.getElementById('archived-chats-container');
+    const toggleIcon = document.getElementById('arch-cht-toggle-icon');
+  
+    toggleButton.addEventListener('click', () => {
+      // Toggle visibility
+      const isHidden = archivedChatsContainer.classList.toggle('hidden');
+  
+      // Adjust the icon direction
+      if (isHidden) {
+        toggleIcon.classList.remove('rotate-180');
+      } else {
+        toggleIcon.classList.add('rotate-180');
+      }
+    });
+  </script>
 </html>
 
