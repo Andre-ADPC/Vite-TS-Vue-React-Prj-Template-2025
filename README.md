@@ -65,26 +65,42 @@ npm install
 npm run dev
 ```
 
+### Lint with [ESLint](https://eslint.org/) & [OXLint](https://oxc.rs/)
+
+```sh
+npm run lint                    # Using ESLint and OXLint
+npm run lint:eslint             # Using ESLint
+npm run lint:oxlint             # Using OXLint
+```
+
 ### Type-Check, Compile and Minify for Production
 
 ```sh
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### Running Tests with [Vitest](https://vitest.dev/) & [Jest](https://jestjs.io/)
+
+We can apply Vitest and Jest in various ways while building the project and these initial scripts are available.
 
 ```sh
-npm run test:unit
+npm run test:unit     # Using Vitest
+npm run test:vue      # Using Vitest, Cypress and Playwright
+npm run test:react    # Using Jest, Cypress and Playwright
+npm run test:all      # Using Vitest, test:vue, and test:react
+
 ```
 
-### Running Component, Functional and E2E Tests
+### Running Tests with [Playwright](https://playwright.dev/) & [Cypress](https://cypress.io/)
 
-These tests can each be ran with their respective scripts.
-
-### Lint with [ESLint](https://eslint.org/)
+Component, Functional and E2E tests can each be ran with their respective scripts.
 
 ```sh
-npm run lint
+npm run test:component:cypress  # Using Cypress
+npm run test:e2e:cypress        # Using Cypress
+npm run test:e2e:playwright     # Using Playwright
+npm run test:vue                # Using Vitest, Cypress and Playwright
+npm run test:react              # Using Jest, Cypress and Playwright
 ```
 
 ## Linking to the Project's Custom Domain on GitHub Pages
