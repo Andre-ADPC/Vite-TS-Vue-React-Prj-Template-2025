@@ -1,0 +1,166 @@
+<!doctype html>
+<html style="font-size: 16px" lang="en-GB">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <!-- Foundation Metadata -->
+    <title>A Tailwind Grid Development Example</title>
+    <meta name="generator" content="Adpc_Projects 0.0.0, projects.adpc-llc.com" />
+    <meta name="keywords" content="Vue.js,React.js, Vite.js, Multi-framework, Multi-domain" />
+    <meta name="description" content="A Tailwind Grid Development Example" />
+    <!-- Facebook & Instagram Metadata -->
+    <meta property="og:title" content="A Tailwind Grid Development Example" />
+    <meta property="og:description" content="A Tailwind Grid Development Example" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./Shared/assets/images/og-proj-sm01.jpg" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:url" content="./Shared/component/grid-layout/landing" />
+    <meta property="og:title" content="A Tailwind Grid Development Example" />
+    <meta property="og:description" content="A Tailwind Grid Development Example" />
+
+    <!-- X & Bluesky Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@FrameWork Blurr" />
+    <meta name="twitter:title" content="A Tailwind Grid Development Example" />
+    <meta name="twitter:description" content="A Tailwind Grid Development Example" />
+    <meta name="twitter:image" content="./Shared/assets/images/og-proj-sm01.jpg" />
+    <link rel="canonical" href="./Shared/SinglePage&ComponentTemplates/SPAs/ChatGrid.html" />
+
+    <!-- Other Metadata -->
+    <meta data-intl-tel-input-cdn-path="./LandingPage/intlTelInput/intlTelInput.min.js" />
+    <meta name="theme-color" content="#47c6fd" />
+    <!-- Scripts + CSS + Fonts -->
+    <script src="https://kit.fontawesome.com/33009c1984.js" crossorigin="anonymous"></script>
+    <link rel="manifest" href="./LandingPage/site.webmanifest" />
+    <link rel="stylesheet" href="./LandingPage/styles/adpc_projects.css" media="screen" />
+    <link rel="stylesheet" href="./LandingPage/styles/index.css" media="screen" />
+    <!-- Custom Scripts -->
+
+    <script id="__gaOptOutExtension">
+      window['_gaUserPrefs'] = {
+        ioo: function () {
+          return true
+        },
+      }
+    </script>
+
+    <!-- Deferred Scripts -->
+    <script class="u-script" src="./Shared/assets/scripts/jquery.js" defer=""></script>
+    <script class="u-script" src="./Shared/assets/scripts/adpc_projects.js" defer=""></script>
+
+    <!-- Font Faces -->
+    <link id="u-theme-google-font" rel="stylesheet" href="./LandingPage/fonts/OpenSans.css" />
+    <link id="u-page-google-font" rel="stylesheet" href="./LandingPage/fonts/Roboto.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "ADPC Projects (IE)",
+        "logo": "images/FrameworkBlurr-Logo-1.png",
+        "sameAs": [
+          "https://vite.dev/",
+          "https://www.typescriptlang.org/",
+          "https://vuejs.org/",
+          "https://react.dev/",
+          "https://github.com/Andre-ADPC",
+          "https://www.linkedin.com/in/andre-du-plessis-992a0329",
+          "https://stackoverflow.com/users/19977074/andre?tab=profile",
+          "https://www.facebook.com/RedDragonX5",
+          "https://x.com/AndreDuP_ADPC",
+          "https://dev.to/andre57",
+          "https://andreduplessis.substack.com/",
+          "https://bsky.app/profile/andre-dup.bsky.social"
+        ]
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              adpc_red: '#a05050',
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="border border-green-400 m-2 bg-gray-800 text-yellow-400">
+    Body
+    <!-- Navigation Bar Large Screens -->
+    <nav class="flex border border-pink-400 m-2">
+      Navigation Top-bar Large Screens
+      <div class="flex w-full align-middle grid-cols-3 grid-rows-1 justify-between border border-red-600 m-2">
+        <div class="flex border border-pink-400 m-2">
+          Nav Side-bar Small Screens
+          <div class="flex-wrap h-full border border-yellow-400 m-2">
+            <div class="border border-blue-600 m-2">LOGO ICON</div>
+            <div class="border border-blue-600 m-2">MENU ITEMS</div>
+            <div class="border border-blue-600 m-2">ACTION ITEMS</div>
+            <div class="border border-blue-600 m-2">USER ITEMS</div>
+            <div class="border border-blue-600 m-2">i18n ITEMS</div>
+          </div>
+        </div>
+        <div class="border border-blue-600 m-2">LOGO FULL</div>
+        <div class="border border-blue-600 m-2">MENU ITEMS</div>
+        <div class="border border-blue-600 m-2">ACTION ITEMS</div>
+        <div class="border border-blue-600 m-2">USER ITEMS</div>
+        <div class="border border-blue-600 m-2">i18n ITEMS</div>
+      </div>
+    </nav>
+
+    <div class="flex h-screen antialiased text-white">
+      <!-- Main Body -->
+      <div class="grid grid-cols-12 grid-rows-1 gap-1 w-full border border-pink-600 m-2">
+        <!-- Sidebar Section -->
+        <div class="col-start-1 col-end-3 flex-wrap h-full border border-red-600 m-0">
+          Sidebar Section
+          <div class="border border-blue-600 m-2">
+            <h1 class="text-3xl font-bold text-adpc_red">Hello Tailwind World!</h1>
+          </div>
+          <div class="border border-blue-600 m-2">Sidebar Area 1</div>
+          <div class="border border-blue-600 m-2">Sidebar Area 2</div>
+          <div class="border border-blue-600 m-2">Sidebar Area 3</div>
+          <div class="border border-blue-600 m-2">Sidebar Area 4</div>
+        </div>
+        <!-- Chat Section -->
+        <div class="col-start-3 col-span-10 flex-wrap w-full h-full border border-red-600 mt-0 mb-0">
+          Chat Section
+          <div class="grid grid-cols-1 gap-1 border border-yellow-400 mt-2 mb-0">
+            <!-- Top UI Portion -->
+            <div class="h-16 border border-blue-600 mb-1 z-10">
+              Top UI
+              <h2 class="text-2xl font-bold text-adpc_red">Chat Section Heading & Controls</h2>
+            </div>
+            <!-- Content Window UI Portion -->
+            <div class="flex-grow overflow-y-auto bg-gray-700 border border-blue-600 mt-2">
+              Content Area
+              <div class="border border-green-600 m-2">
+                Some Content Area 1
+                <svg width="210" height="210">
+                  <path
+                    style="fill: green; stroke: black; stroke-width: 3; stroke-linecap: round"
+                    d="M 50 50 L 150 50 A 50 50 0 0 1 150 150 Z"
+                  />
+                </svg>
+              </div>
+              <div class="border border-green-600 m-2">Some Content Area 2</div>
+              <div class="border border-green-600 m-2">Some Content Area 3</div>
+              <div class="border border-green-600 m-2">Some Content Area 4</div>
+            </div>
+            <!-- Bottom UI Portion -->
+            <div class="h-16 absolute bottom-0 flex-wrap w-auto border border-blue-600 mt-2 mb-0 z-10">
+              Bottom UI
+              <h2 class="text-2xl font-bold text-adpc_red">Chat Message Entry Section & Controls</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script></script>
+  </body>
+</html>
