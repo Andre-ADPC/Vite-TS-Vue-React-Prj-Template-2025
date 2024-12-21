@@ -13,11 +13,16 @@ const config: Config = {
     extend: {
       animation: {
         fadeIn: 'fadeIn 2s ease-in-out',
+        expandTransition: 'expandTransition 0.5s ease-in-out',
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        expandTransition: {
+          '0%': { height: '0' },
+          '100%': { height: 'auto' },
         },
       },
     },
