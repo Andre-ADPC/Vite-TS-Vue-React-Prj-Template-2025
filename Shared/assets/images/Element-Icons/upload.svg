@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" x="0" y="0" version="1.1" viewBox="0 0 300 300">
+<path d="M231 112c17 0 31 14 31 31v44c0 35 0 53-11 64s-29 11-64 11h-75c-35 0-53 0-64-11s-11-29-11-64v-44c0-17 14-31 31-31" 
+fill="none" 
+stroke="green" 
+stroke-linecap="round" 
+stroke-miterlimit="5" 
+stroke-width="20">
+    </path>
+    <path d="M150 37 202 90M150 37 98 90M150 37V200" 
+fill="none" 
+stroke="red" 
+stroke-linecap="round" 
+stroke-linejoin="round" 
+stroke-miterlimit="5" 
+stroke-width="20">
+    </path>
+</svg>
