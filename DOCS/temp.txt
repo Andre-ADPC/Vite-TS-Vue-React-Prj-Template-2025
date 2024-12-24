@@ -1,49 +1,18 @@
-Hi there! I need help with some strict TypeScript functionality in a Vue.js 3 project using Vite, please.
-Background:
-My ,script. section is as follows:
-[<script setup lang="ts">
-import { ref } from "vue";
+PS C:\Laragon\www\Vite-TS-Vue-Prj-Template-2025>      pnpm doctor
+PS C:\Laragon\www\Vite-TS-Vue-Prj-Template-2025>      pnpm dedupe
+ 
+PS C:\Laragon\www\Vite-TS-Vue-Prj-Template-2025>      pnpm audit
 
-defineProps<{ msg: string }>();
+PS C:\Laragon\www\Vite-TS-Vue-Prj-Template-2025>      pnpm why rimraf@2.7.1
 
-const count = ref(0);
-// Working Dynamically with Images sourced from 'Assets' folder:
-// Where 'name' is the actual name of the file,
-// and 'ext' is the extension i.e. myjpg.jpg
+PS C:\Laragon\www\Vite-TS-Vue-Prj-Template-2025>      pnpm add rimraf@latest      
 
-function getImageUrl(name, ext) {
-  return new URL( ../src/assets/images/${name}.${ext}, import.meta.url).href;
-}
-</script>]
+PS C:\Laragon\www\Vite-TS-Vue-Prj-Template-2025>      pnpm add puppeteer@latest
 
-and the related <template> section to load the image/s is:
-[  <div>
-    <!-- Applying Dynamic Image Loading -->
-    <!--
-    <template>
-      <img :src="getImageUrl('myjpg','jpg')" alt="">
-      <img :src="getImageUrl('mysvg','svg')" alt="">
-    </template>
-    -->
-    <img
-      src="getImageUrl(;ADPCBanner; jpeg;)"
-      alt="ADPC Projects Banner"
-      width="100%"
-    />
-  </div>]
+PS C:\Laragon\www\Vite-TS-Vue-Prj-Template-2025>      pnpm add penthouse@latest
 
-The Error thrown:
-[[plugin:vite:import-analysis] Failed to resolve import "getImageUrl(;ADPCBanner; jpeg;)" from "src/components/WelcomeInViteWorld.vue". Does the file exist?
+PS C:\Laragon\www\Vite-TS-Vue-Prj-Template-2025>      pnpm add critical@latest
 
-C:/Laragon/www/Vue-TS-Prj-Template-2025/src/components/WelcomeInViteWorld.vue:26:43
+PS C:\Laragon\www\Vite-TS-Vue-Prj-Template-2025>      pnpm add -D patch-package
 
-18 |  });
-19 |  import { createCommentVNode as _createCommentVNode, createElementVNode as _createElementVNode, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, createStaticVNode as _createStaticVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from "vue";
-20 |  import _imports_0 from "getImageUrl(;ADPCBanner; jpeg;)";
-   |                          ^
-21 |  const _hoisted_1 = { class: "card" };
-22 |  function _sfc_render(_ctx, _cache, $props, $setup, $data, $options]
-
-I hope you can help me resolve this. 
-Note: The image files do exist, is present in my local project, and the folder path referenced from the root is as follows:
-../src/assets/images/ADPCBanner.jpeg 
+PS C:\Laragon\www\Vite-TS-Vue-Prj-Template-2025>      pnpm patch penthouse
